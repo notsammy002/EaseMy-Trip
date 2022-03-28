@@ -1,0 +1,18 @@
+[
+  {
+    "company_name": "AirAsia",
+    "company_icon": "https://flight.easemytrip.com/Content/AirlineLogon/I5.png",
+    "departure_time": "13:00",
+    "arrival_time": "14:50",
+    "duration": "01h 50m",
+    "from_location": "Delhi",
+    "to_location": "Mumbai",
+    "price": "5850",
+    "stop": true,
+    "from_location_code": "DEL",
+    "to_location_code": "BOM",
+    "day": "Sat",
+    "departure_date": "16April2022",
+    "arrival_date": "16April2022"
+  }
+]
