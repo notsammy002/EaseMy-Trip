@@ -1,0 +1,160 @@
+.body{
+    background-color: #f2f4f5;
+}
+
+.body2{
+    width: 100%;
+    float: left;
+}
+
+.detail{
+    width: 67.5%;
+    float: left;
+}
+
+.detail_inner{
+    width: 100%;
+}
+
+.flightdetail{
+   float: left;
+width: 100%;
+border: 1px solid #d2d2d2;
+background: #ffffff;
+border-radius: 4px;
+box-shadow: 0 0 6px rgb(0 0 0 / 25%); 
+}
+
+
+.flightdetail_title{
+    width: 100%;
+    float: left;
+    font-size: 18px;
+    color: #1a1a1a;
+    height: 50px;
+    line-height: 50px;
+    background: #f8f6f6;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.flightdetail_title:before{
+   float: left;
+    content: " ";
+    background: url(https://flight.easemytrip.com/Content/img/traveller/img-sprite.png);
+    width: 35px;
+    height: 35px;
+    background-position: -60px -4px;
+    margin-top: 8px; 
+}
+
+
+.flightdetail_title span{
+       margin-left: 1%; 
+}
+
+.flightdetail_body1{
+    width: 96%;
+    margin:0 auto;
+}
+
+.flightdetail_body2{
+    width: 100%;
+    float: left;
+    border: 1px solid #dad6d6;
+    margin-bottom: 0px;
+    border-radius: 4px;
+    margin-top: 12px;
+    box-shadow: 0 0 3px rgb(0 0 0 / 20%);
+    -webkit-box-shadow: 0 0 3px rgb(0 0 0 / 20%);
+}
+
+.flightdetail_body_tag{
+   background-color: #5d5a5a;
+padding: 3px 10px;
+float: left;
+font-size: 12px;
+font-weight: 500;
+text-transform: uppercase;
+color: #fff;
+border-radius: 0px 0px 14px 0; 
+}
+
+.flightdetail_body_info{
+   width: 100%;
+    float: left;
+    margin-top: 10px; 
+}
+
+.flightdetail_clr{
+  clear: both;  
+}
+
+.flightdetail_body_info_des{
+    width: 100%;
+    float: left;
+    font-size: 15px;
+    color: #1a1a1a;
+}
+
+.flightdetail_body_info_des::before{
+  float: left;
+    content: " ";
+    background: url("https://flight.easemytrip.com/Content/img/traveller/img-sprite.png");
+    width: 42px;
+    height: 20px;
+    background-position: -100px -6px;  
+}
+
+.flightdetail_body_info_des_name{
+    font-size: 16px;
+    color: #1a1a1a;
+    padding-left: 1%;
+}
+
+.flightdetail_body_info_des_date{
+    font-size: 14px;
+    color: #6a6868;
+}
+
+.flightdetail_fligt_detail1{
+    width: 20%;
+    float: left;
+}
+
+.flightdetail_fligt_detail_img{
+    width: 100%;
+    float: left;
+    margin-top: 10px;
+    margin-left: 10% ;
+}
+
+.flightdetail_fligt_detail_img_logo{
+    width: 20%;
+    float: left;
+}
+
+.flightdetail_fligt_detail_img_logo_info{
+    float: left;
+margin-left: 10%;
+}
+
+.flightdetail_fligt_detail_img_logo_info1{
+  display: block;
+    color: #1a1a1a;
+    font-size: 16px;  
+}
+
+.flightdetail_fligt_detail_img_logo_info2{
+display: block;
+    color: #6a6868;
+    font-size: 12px;
+}
+
+
+
+.flightdetail_fligt_detail2{
+    width: 80%;
+    float: left;
+}
+
