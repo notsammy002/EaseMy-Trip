@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styles from "./flightCard.module.css";
+import { MoreFair } from "./MoreFair";
 
 // const demo = 
 //     {
@@ -22,6 +23,8 @@ import styles from "./flightCard.module.css";
 
 export const FlightCard = ({demo}) => {
 
+  const [stateShow,setStateShow] = useState(demo.price)
+
     const [showAccordian1,setShowAccordian1] = useState(false)
   return (
     <div className={styles.flightCardContainer}>
@@ -32,15 +35,12 @@ export const FlightCard = ({demo}) => {
         <div className={styles.startingTime} >  <div>{demo.departure_time}</div> <div className={styles.from_location} >{demo.from_location}</div> </div>
         <div className={styles.duration} > <div className={styles.durationExact}> {demo.duration}</div>  <div className={styles.arrow} > </div>  <div className={styles.stop} >{demo.stop}-stop</div> </div>
         <div className={styles.arrivalTime}>  <div>{demo.arrival_time}</div> <div className={styles.to_location} >{demo.to_location}</div> </div>
-        <div className={styles.priceContainer}> <div className={styles.price}>₹ {demo.price}</div> <button onClick={()=>{setShowAccordian1((prev)=>(!prev))}} >+ More Fare</button></div>
+        <div className={styles.priceContainer}> <div className={styles.price}>₹ {stateShow}</div> <button onClick={()=>{setShowAccordian1((prev)=>(!prev))}} >+ More Fare</button></div>
         <div className={styles.bookNowButton} ><button >BOOK NOW</button></div> 
         
       </div>
       <div className={showAccordian1 ? styles.showAccordian1 : styles.dontShowAccordian1 }>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati
-        accusantium autem, unde qui atque, eveniet minima necessitatibus
-        consequatur corrupti officia quidem possimus. Alias dignissimos natus
-        eius doloremque magnam fugit non?
+        <MoreFair demo={demo} stateShow={stateShow} setStateShow={setStateShow}/>
       </div>
     </div>
   );

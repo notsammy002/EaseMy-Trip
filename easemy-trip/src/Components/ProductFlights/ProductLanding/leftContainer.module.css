@@ -3,50 +3,129 @@
 }
 
 .filterTitle {
-    color: #000;
-    text-transform: uppercase;
-    font-size: 14px;
-    font-family: inherit;
-    font-weight: 400;
-    line-height: 1.1;
-    box-sizing: border-box;
-    padding-top: 11px;
-    padding-left: 15px;
-    padding-bottom: 11px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.192);
+  color: #000;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-family: inherit;
+  font-weight: 400;
+  line-height: 1.1;
+  box-sizing: border-box;
+  padding-top: 11px;
+  padding-left: 15px;
+  padding-bottom: 11px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.192);
 }
 
-.popularFilters{
-    box-sizing: border-box;
-    padding-top: 11px;
-    padding-left: 15px;
-    padding-bottom: 11px;
-   
+.popularFilters {
+  box-sizing: border-box;
+  padding-top: 11px;
+  padding-left: 15px;
+  padding-bottom: 11px;
 }
 
-
-.titlePopularFilters{
-    font-size: 14px;
-    font-weight: 500;
+.titlePopularFilters {
+  font-size: 14px;
+  font-weight: 500;
 }
-.filterChecks{
-    margin-left: -3px;
-    margin-top: 11px;
-    font-size: 12px;
-    display: flex;
-    align-items: center;
-    column-gap: 5px;
-    font-weight: 300;
-    /* position: relative;
+.filterChecks {
+  margin-left: -3px;
+  margin-top: 11px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+  font-weight: 300;
+  /* position: relative;
     right: 5px; */
 }
 
-.filterChecks input[type=checkbox]{
-    height: 18px;
-    width: 18px;
-    outline: 0px solid rgba(0, 0, 0, 0.336);
-    margin-top: -2px;
+.filterChecks input[type="checkbox"] {
+  height: 18px;
+  width: 18px;
+  outline: 0px solid rgba(0, 0, 0, 0.336);
+  margin-top: -2px;
 }
-.popularFilters{
-    border-bottom: 1px solid rgba(0, 0, 0, 0.192);
+.popularFilters {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.192);
 }
+
+.priceRangeBox {
+  box-sizing: border-box;
+  padding-top: 11px;
+  padding-left: 15px;
+  padding-bottom: 11px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.192);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100px;
+  padding-bottom: 20px;
+
+}
+
+.stopsBox {
+  box-sizing: border-box;
+  padding-top: 11px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.192);
+  padding-bottom: 11px;
+}
+
+.stopFilters {
+display: flex;
+justify-content: center;
+column-gap: 5px;
+margin-top: 10px;
+padding-bottom: 10px;
+}
+.stopFilters button {
+  font-family: sans-serif;
+  font-size: 11px;
+  width: 63px;
+  height: 45px;
+  background-color: transparent;
+  border: 0px;
+  border: 0.3px solid rgba(0, 0, 0, 0.288);
+  border-radius: 4px;
+  color: rgba(0, 0, 0, 0.658);
+  cursor: pointer;
+  
+}
+
+.airlineChecks img{
+  width: 15px;
+  margin-left: 5px;
+}
+
+.airlineChecks span{
+  font-weight: 500;
+}
+
+
+.airlineChecks {
+  margin-left: -3px;
+  margin-top: 11px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding-right: 10px;
+  column-gap: 5px;
+  font-weight: 300;
+  /* position: relative;
+    right: 5px; */
+}
+
+.airlineChecks input[type="checkbox"] {
+  height: 18px;
+  width: 18px;
+  outline: 0px solid rgba(0, 0, 0, 0.336);
+  margin-top: -2px;
+}
+
+.airlineChecks label{
+  position: relative;
+  bottom: 3px;
+  margin-left: 8px;
+}
+
