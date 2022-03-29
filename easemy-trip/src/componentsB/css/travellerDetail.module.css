@@ -1,0 +1,48 @@
+.outerDiv {
+  width: 90%;
+  height: max-content;
+  /* height: 270px; */
+  border: 1px solid d2d2d2;
+  box-shadow: 0 0 6px rgb(0 0 0 / 25%);
+  border-radius: 4px;
+  background-color: white;
+  padding-bottom: 0.2em;
+  /* margin-left: 1.5em; */
+}
+
+.firstPara {
+  font-size: 0.88rem;
+  font-weight: 600;
+  margin-top: 7px;
+  line-height: 26px;
+  margin-left: 40px;
+}
+
+.edt {
+  background: url("https://flight.easemytrip.com/Content/img/traveller/img-sprite.png");
+  width: 45px;
+  height: 30px;
+  background-position: -40px -92px;
+  left: 70px;
+  top: 24px;
+  position: absolute;
+  cursor: pointer;
+}
+
+.table {
+  width: 100%;
+  padding-left: 1.5em;
+}
+
+.table .th {
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 26px;
+}
+
+.table .td {
+  font-weight: 300;
+  font-size: 13px;
+  color: #878787;
+  line-height: 26px;
+}

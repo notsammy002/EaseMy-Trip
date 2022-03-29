@@ -1,0 +1,148 @@
+.outerDiv {
+  width: 90%;
+  height: max-content;
+  /* height: 270px; */
+  border: 1px solid d2d2d2;
+  box-shadow: 0 0 6px rgb(0 0 0 / 25%);
+  border-radius: 4px;
+  background-color: white;
+  padding-bottom: 0.2em;
+  /* margin-left: 1.5em; */
+}
+
+.firstPara {
+  font-size: 0.88rem;
+  font-weight: 600;
+  margin-top: 7px;
+  line-height: 26px;
+  margin-left: 40px;
+}
+
+.edt {
+  background: url("https://flight.easemytrip.com/Content/img/traveller/img-sprite.png");
+  width: 45px;
+  height: 30px;
+  background-position: -40px -92px;
+  left: 70px;
+  top: 24px;
+  position: absolute;
+  cursor: pointer;
+}
+
+.flightsContainer {
+  height: max-content;
+  border: 1px solid #dad6d6;
+  margin: 0 0.8em 0.8em 0.8em;
+  box-shadow: 0 0 3px rgb(0 0 0 / 20%);
+}
+
+.place {
+  margin-left: 1.5rem;
+  display: flex;
+  place-items: center;
+  gap: 1em;
+}
+
+.place .span1 {
+  font-size: 0.8em;
+  color: #6a6868;
+}
+
+.details {
+  display: grid;
+  grid-template-columns: 20% 45%;
+  margin-left: 1.5rem;
+  gap: 8%;
+  place-items: center;
+}
+
+/* Flight Name */
+.flightName {
+  display: flex;
+  flex-direction: column;
+}
+
+.logoCompany {
+  width: 25px;
+  height: 25px;
+}
+
+.nameNumber {
+  line-height: 2px;
+}
+.name {
+  font-size: 1em;
+  color: #1a1a1a;
+}
+.number {
+  font-size: 0.8em;
+  color: #6a6868;
+}
+.lowFare {
+  background-color: #eae8e8;
+  border-radius: 2em;
+  font-weight: 500;
+  font-size: 0.9em;
+  padding: 1px 15px;
+  margin: 1em 0;
+}
+
+/* Flight Time */
+.flightTime {
+  display: grid;
+  gap: 1.5em;
+  grid-template-columns: 40% 50% 40%;
+  place-items: center;
+}
+.board {
+  line-height: 2px;
+}
+
+.board strong {
+  font-weight: 700;
+  font-size: 1.5em;
+  line-height: 5px;
+}
+
+.board p {
+  color: #6a6868;
+  font-size: 0.8em;
+  line-height: 5px;
+}
+
+.beforeAfter {
+  /* border-top: 1px dashed black; */
+  width: 100%;
+  text-align: center;
+}
+
+.hrDetails {
+  width: 100%;
+  /* position: absolute; */
+}
+
+.beforeAfter .duration {
+  color: #6a6868;
+  font-size: 12px;
+}
+.beforeAfter .refund {
+  border: 1px solid #2dca1c;
+  border-radius: 45px;
+  width: 50%;
+  font-size: 10px;
+  color: #2dca1c;
+  padding: 2px 0;
+  margin: 10px auto 15px;
+}
+
+.baggage {
+  color: #999898;
+  font-size: 13px;
+}
+
+.baggage_active {
+  border-bottom: 3px solid #2196f3;
+  width: max-content;
+  color: #2196f3;
+  font-size: 13px;
+}
