@@ -22,7 +22,7 @@ import styles from "./flightCard.module.css";
 
 export const FlightCard = ({demo}) => {
 
-    const [showAccordian1,setShowAccordian1] = useState(true)
+    const [showAccordian1,setShowAccordian1] = useState(false)
   return (
     <div className={styles.flightCardContainer}>
       <div className={styles.detailContainer} >

@@ -13,8 +13,7 @@
 
 .leftContainer{
     width: 240px;
-   
-    background-color: white;
+    border: 1px solid black;
 
 }
 .rightContainer{
