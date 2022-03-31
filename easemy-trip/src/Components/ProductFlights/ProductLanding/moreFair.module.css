@@ -1,0 +1,58 @@
+.mainContainer{
+    height: 250px;
+    display: flex;
+    align-items: center;
+    padding-left: 25px;
+    column-gap: 15px;
+}
+
+.lowFare{
+    box-shadow:0 0 7px rgb(0 0 0 / 50%);
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 220px;
+
+}
+
+.titleBar{
+    justify-content: center;
+    background-color: rgb(251,246,202);
+    font-size: 16px;
+    height: 40px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.PriceCheck{
+    font-size: large;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    box-sizing: border-box;
+    padding-right: 10px;
+    padding-top: 10px;
+}
+
+.lowFare img{
+    width: 15px;
+}
+
+
+
+.lowFare li{
+    font-size: 11px;
+    display: flex;
+    align-items: center;
+    margin-top: 8px;
+    width: 200px;
+    column-gap: 5px;
+}
+
+.firstTwoContainer{
+    display: flex;
+    column-gap: 15px;
+}

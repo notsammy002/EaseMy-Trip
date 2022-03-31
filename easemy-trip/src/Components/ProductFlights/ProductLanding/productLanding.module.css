@@ -1,0 +1,19 @@
+.mainContainer {
+  background-color: rgb(238, 238, 238);
+  width: 100vw;
+  box-sizing: border-box;
+  /* border: 1px solid black; */
+  padding-top: 33px;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 3%;
+}
+
+.leftContainer {
+  width: 240px;
+}
+.rightContainer {
+  width: 70%;
+}

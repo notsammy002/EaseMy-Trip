@@ -1,0 +1,1038 @@
+.body{
+    background-color: #f2f4f5;
+}
+
+.body1{
+    width: 95%;
+    margin: 10px auto 0px;
+    padding: 10px 0px;
+}
+
+.body2{
+    width: 100%;
+    float: left;
+}
+
+
+.detail{
+    width: 67.5%;
+    float: left;
+}
+
+.detail_inner{
+    width: 100%;
+}
+
+.flightdetail{
+   float: left;
+width: 100%;
+border: 1px solid #d2d2d2;
+background: #ffffff;
+border-radius: 4px;
+box-shadow: 0 0 6px rgb(0 0 0 / 25%); 
+}
+
+
+.flightdetail_title{
+    width: 100%;
+    float: left;
+    font-size: 18px;
+    color: #1a1a1a;
+    height: 50px;
+    line-height: 50px;
+    background: #f8f6f6;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.flightdetail_title:before{
+   float: left;
+    content: " ";
+    background: url(https://flight.easemytrip.com/Content/img/traveller/img-sprite.png);
+    width: 35px;
+    height: 35px;
+    background-position: -60px -4px;
+    margin-top: 8px; 
+}
+
+
+.flightdetail_title span{
+       margin-left: 1%; 
+}
+
+.flightdetail_body1{
+    width: 96%;
+    margin:0 auto;
+}
+
+.flightdetail_body2{
+    width: 100%;
+    float: left;
+    border: 1px solid #dad6d6;
+    margin-bottom: 12px;
+    border-radius: 4px;
+    margin-top: 12px;
+    box-shadow: 0 0 3px rgb(0 0 0 / 20%);
+    -webkit-box-shadow: 0 0 3px rgb(0 0 0 / 20%);
+}
+
+.flightdetail_body_tag{
+   background-color: #5d5a5a;
+padding: 3px 10px;
+float: left;
+font-size: 12px;
+font-weight: 500;
+text-transform: uppercase;
+color: #fff;
+border-radius: 0px 0px 14px 0; 
+}
+
+.flightdetail_body_info{
+   width: 100%;
+    float: left;
+    margin-top: 10px; 
+}
+
+.flightdetail_clr{
+  clear: both;  
+}
+
+.flightdetail_body_info_des{
+    width: 100%;
+    float: left;
+    font-size: 15px;
+    color: #1a1a1a;
+}
+
+.flightdetail_body_info_des::before{
+  float: left;
+    content: " ";
+    background: url("https://flight.easemytrip.com/Content/img/traveller/img-sprite.png");
+    width: 42px;
+    height: 20px;
+    background-position: -100px -6px;  
+}
+
+.flightdetail_body_info_des_name{
+    font-size: 16px;
+    color: #1a1a1a;
+    padding-left: 1%;
+}
+
+.flightdetail_body_info_des_date{
+    font-size: 14px;
+    color: #6a6868;
+}
+
+.flightdetail_fligt_detail1{
+    width: 20%;
+    float: left;
+}
+
+.flightdetail_fligt_detail_img{
+    width: 100%;
+    float: left;
+    margin-top: 10px;
+    margin-left: 10% ;
+}
+
+.flightdetail_fligt_detail_img_logo{
+    width: 20%;
+    float: left;
+}
+
+.flightdetail_fligt_detail_img_logo_info{
+    float: left;
+margin-left: 10%;
+}
+
+.flightdetail_fligt_detail_img_logo_info1{
+  display: block;
+    color: #1a1a1a;
+    font-size: 16px;  
+}
+
+.flightdetail_fligt_detail_img_logo_info2{
+display: block;
+    color: #6a6868;
+    font-size: 12px;
+}
+
+.flightdetail_fligt_detail_img_logo_tag{
+    font-size: 11px;
+    font-weight: 600;
+    margin-top: 7px;
+    float: left;
+    margin-left: -20%;
+    padding: 2px 8px;
+    color: #000;
+    border-radius: 20px;
+    background: #eae8e8;
+}
+
+.flightdetail_fligt_detail2{
+    width: 80%;
+    float: left;
+}
+
+.flightdetail_fligt_1{
+   width: 33%;
+    float: left;
+    position: relative;
+}
+
+.flightdetail_fligt_1cm{
+ float: left;
+font-size: 19px;
+color: #1a1a1a;
+text-align: left;
+padding-left: 20%;   
+font-weight: 700;
+}
+
+.flightdetail_fligt_airdt{
+  width: 80%;
+    float: left;
+    color: #6a6868;
+    font-size: 12px;
+    text-align: left;
+    padding-left: 20%;  
+}
+
+.flightdetail_fligt_airdt span{
+    display: inline!important;
+    font-weight: 600;
+}
+
+.flightdetail_fligt_airdt span{
+    display: block;
+}
+
+.flightdetail_fligt_3{
+  width: 33%;
+    float: left;
+    position: relative;  
+}
+
+.flightdetail_fligt_3stp{
+    width: 100%;
+    float: left;
+    color: #6a6868;
+    font-size: 12px;
+    text-align: center;
+}
+
+.flightdetail_fligt_3lindvd{
+  width: 100%;
+    height: 1px;
+    border-bottom: 1px dotted #b0aeae;
+    float: left;
+    position: absolute;
+    right: 0;
+    top: 34px;  
+}
+
+.flightdetail_fligt_3lindvd::before{
+ float: left;
+    content: " ";
+    background: url("https://flight.easemytrip.com/Content/img/traveller/img-sprite.png");
+    width: 10px;
+    height: 10px;
+    background-position: -290px -58px;
+    margin-top: -3px;   
+}
+
+.flightdetail_fligt_3fli{
+   width: 32px;
+    height: 32px;
+    background: url("https://flight.easemytrip.com/Content/img/traveller/img-sprite.png");
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: -12px;
+    background-position: -265px -3px; 
+}
+
+.flightdetail_fligt_3lindvd::after{
+float: right;
+    content: " ";
+    background: url("https://flight.easemytrip.com/Content/img/traveller/img-sprite.png");
+    width: 10px;
+    height: 10px;
+    background-position: -290px -58px;
+    margin-top: -3px;
+    margin-right: -3px;
+}
+
+.flightdetail_fligt_3refund{
+    float: left;
+    width: 100%;
+    text-align: center;
+}
+
+.flightdetail_fligt_3refund span{
+    width: 50%;
+    display: block;
+    background: #ffffff;
+    border-radius: 45px;
+    font-size: 10px;
+    color: #2dca1c;
+    border: 1px solid #2dca1c;
+    margin: 40px auto 15px;
+    text-align: center;
+    padding: 2px 0px;
+    text-transform: uppercase;
+}
+ 
+
+@media screen and (max-width: 500px) {
+    .flightdetail_fligt_1cm_time{
+        font-size: 90%;
+    }
+
+    .flightdetail_fligt_airdt{
+        font-size: 50%;
+    }
+
+    .flightdetail_fligt_3refund span{
+        font-size: 15%;
+    }
+
+    .medical_tr_covr_flco_policy{
+        float: left;
+    }
+
+    .userDetail_header_info_tv{
+        display: none;
+    }
+
+  }
+
+.medical_bor{
+  float: left;
+width: 100%;
+margin-top: 2%;
+border: 1px solid #d2d2d2;
+background: #ffffff;
+border-radius: 4px;
+box-shadow: 0 0 6px rgb(0 0 0 / 25%);  
+}
+
+.medical_tr_covr{
+  width: 100%;
+    margin-left: 12px;
+    float: left;  
+}
+
+.medical_tr_covr_logo{
+    margin-right: 7px;
+    display: flex;
+}
+
+.medical_tr_covr_info{
+    width: 91%;
+    margin-top: 2%;
+}
+
+.medical_tr_covr_flco{
+  font-size: 13px;
+    color: #2196f3;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 3px;
+    
+    align-items: center;  
+}
+
+.medical_tr_covr_flco img{
+    vertical-align: middle;
+}
+
+.medical_tr_covr_flco_policy{
+ margin-left: auto;
+    font-size: 12px;
+    color: #2196f3;
+    float: right;
+    text-decoration: underline;
+    font-weight: 500;   
+}
+
+.medical_tr_covr_span{
+  font-size: 12px;
+    color: #000;
+    display: block;
+    font-weight: 500;  
+}
+
+.medical_insurance{
+    background-color: #f7f7f7;
+    width: 96%;
+    display: inline-block;
+    padding: 0% 2% 1% 2%;
+}
+
+.medical_insurance_yes{
+  width: 95%;
+    padding-top: 8px;
+    display: flex;
+    font-size: 12px;
+    color: #000000;  
+}
+
+.medical_insurance_yes label{
+  font-weight: normal;
+cursor: pointer;  
+
+}
+
+.medical_insurance_lable{
+    display: block;
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 12px;
+    user-select: none;
+    margin-left: -2%;
+}
+
+.medical_insurance_lable input{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.medical_insurance_checkmate::after{
+  top: 3px;
+    left: 3px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #2196f3;  
+}
+
+.gooto_know{
+    background: #fff;
+    border: 1px solid #d2d2d2;
+    padding: 0;
+    float: left;
+    width: 100%;
+    margin-top: 2%;
+    position: relative;
+    border-radius: 4px;
+    padding-bottom: 8px;
+    box-shadow: 0 0 6px rgb(0 0 0 / 25%);
+}
+
+.goodto_know_logo{
+    background: #dcfbd0;
+    border-bottom: 1px solid #c4e4b8;
+    padding: 6px 20px 4px 20px;
+    display: flex;
+    margin-bottom: 8px;
+    border-radius: 3px 3px 0 0;
+}
+
+.goodto_know_logothumb{
+    margin-right: 10px;
+}
+
+.goodto_know_logotext h2 {
+    border: 0 none;
+    margin: 0;
+    outline: 0 none;
+    padding: 0;
+    font-size: medium;
+}
+
+.goodto_know_logotext p{
+    font-size: 11px;
+    color: #333;
+    margin: 0;
+    padding: 3px 0;
+}
+
+.goodto_know_listul{
+    margin: 0px 20px;
+    font-size: 85%;
+}
+
+.infomation{
+    background: #e3f8fa;
+    border: 1px solid #cddbdc;
+    margin-top: 2%;
+    padding: 10px 20px;
+    position: relative;
+    border-radius: 4px;
+    float: left;
+}
+
+.infomation h2{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.infomation_listul{
+    margin: 0px -5px;
+    font-size: 83%;
+}
+
+.insurance{
+    border: 1px solid #d2d2d2;
+    background: #ffffff;
+    margin-top: 2%;
+    padding: 10px 20px;
+    position: relative;
+    border-radius: 4px;
+    float: left;
+}
+
+.insurance_body{
+    width: 96%;
+    margin: 0 auto;
+}
+
+.insurance_title{
+    width: 97%;
+    float: left;
+    position: relative;
+}
+
+.insurance_title_logo{
+  width: 5%;
+    
+    margin-left: 0px;  
+}
+
+.insurance_title_logo1{
+  width: 29px;
+    height: 37px;
+    float: left;
+    background: url("https://flight.easemytrip.com/Content/img/traveller/img-sprite.png");
+    background-position: -229px -48px;  
+}
+
+.insurance_title_text{
+    width: 92%;
+    float: left;
+    font-size: 14px;
+    margin-bottom: 6px;
+    color: #302f2f;
+}
+
+.insurance_title_textl1{
+    font-weight: 800;
+}
+
+.insurance_title_logo2{
+    position: absolute;
+    right: 0;
+    top: 1px;
+}
+
+.insurance_card{
+    width: 100%;
+    float: left;
+    margin-bottom: 10px;
+    margin-left: 1.5%;
+}
+
+.insurance_card1{
+  width: 22%;
+    float: left;
+    border: 1px solid #dcd9d9;
+    margin-right: 2%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    
+    border-radius: 5px;  
+}
+
+.insurance_card1_logo{
+  padding: 7px 0 0;
+    margin: 0 auto;
+    display: block;  
+}
+
+.insurance_card1_price{
+  width: 100%;
+    float: left;
+    text-align: center;  
+}
+
+.insurance_card1_price label{
+    font-size: 60%;
+    font-weight: 500;
+}
+
+.insurance_card2{
+    width: 20%;
+      float: left;
+      border: 1px solid #dcd9d9;
+      margin-right: 2%;
+      margin-top: 1%;
+      margin-bottom: 1%;
+      height: 114px;
+      border-radius: 5px;  
+}
+
+  .insurance_card2 span{
+      font-size: xx-large;
+      color: lightskyblue;
+      padding: 7px 0 0;
+      margin: 10% auto 0 6%;
+    display: block; 
+  } 
+
+
+  /* sidebar css code */
+
+  .sideBar{
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+
+  .sideBar_body{
+    position: relative !important;
+    top: 0px;
+    width: 29%;
+    float: right;
+  }
+
+  .sideBar_fd_r{
+    width: 100%;
+    float: right;
+    position: relative;
+  }
+
+  .sideBar_bor{
+    float: left;
+    width: 100%;
+    border: 1px solid #d2d2d2;
+    background: #ffffff;
+    border-radius: 4px;
+    box-shadow: 0 0 6px rgb(0 0 0 / 25%);
+  }
+
+  .sideBar_bor_head{
+    width: 100%;
+  float: left;
+  background: #f8f6f6;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;   
+  }
+ 
+  .sideBar_bor_head_logo{
+   width: 53%;
+    padding-left: 3%;
+    float: left;
+    font-size: 98%;
+    color: #1a1a1a;
+    height: 50px;
+    line-height: 50px;   
+  }
+  
+  .sideBar_bor_head_logo::before{
+    float: left;
+    content: " ";
+    background: url("https://flight.easemytrip.com/Content/img/traveller/img-sprite.png");
+    width: 35px;
+    height: 35px;
+    background-position: -227px -1px;
+    margin-top: 7px;  
+  }
+  
+.sideBar_bor_head_countA, .sideBar_bor_head_countC, .sideBar_bor_head_counti{
+    width: 10%;
+    padding-left: 3%;
+    float: left;
+    font-size: 13px;
+    color: #1a1a1a;
+    height: 50px;
+    line-height: 50px;
+}
+
+.sideBar_bor_head_countA::before{
+    float: left;
+    content: " ";
+    background: url("https://flight.easemytrip.com/Content/img/traveller/img-sprite.png");
+    width: 18px;
+    height: 20px;
+    background-position: 0px -48px;
+    margin-top: 16px;
+    padding-right: 10%;
+}
+
+.sideBar_bor_head_countC::before{
+    float: left;
+    content: " ";
+    background: url("https://flight.easemytrip.com/Content/img/traveller/img-sprite.png");
+    width: 21px;
+    height: 23px;
+    background-position: -13px -48px;
+    margin-top: 16px;
+    padding-right: 10%;
+}
+
+.sideBar_bor_head_counti::before{
+    float: left;
+    content: " ";
+    background: url("https://flight.easemytrip.com/Content/img/traveller/img-sprite.png");
+    width: 20px;
+    height: 20px;
+    background-position: -38px -48px;
+    margin-top: 16px;
+    padding-right: 10%;
+}
+
+.sideBar_bor_table{
+    width: 100%;
+    float: left;
+    display: block;
+}
+
+.sideBar_bor_tableR1{
+    width: 100%;
+    float: left;
+    border-bottom: 1px solid #e5e3e3;
+    display: flex;
+}
+
+.sideBar_bor_tableR1C1{
+    width: 66%;
+    padding-left: 4%;
+    float: left;
+    color: #1a1a1a;
+    font-size: 13px;
+    height: 35px;
+    line-height: 35px;
+}
+
+.sideBar_bor_tableR1C2{
+    width: 30%;
+    float: left;
+    margin-top: 2%;
+    font-size: 90%;
+}
+
+.sideBar_bor_tableR2C1{
+    width: 48%;
+    padding-left: 4%;
+    float: left;
+    color: #d63b05;
+    font-size: 18px;
+    height: 35px;
+    line-height: 35px;
+    font-weight: bold;
+}
+
+.sideBar_bor_tableR2C2{
+    width: 28%;
+    float: left;
+    color: #d63b05;
+    font-size: 18px;
+    text-align: right;
+    height: 35px;
+    line-height: 35px;
+    font-weight: bold;
+}
+
+.sideBar_coupon{
+    float: left;
+    width: 100%;
+    margin-top: 6%;
+    border: 1px solid #d2d2d2;
+    border-radius: 4px;
+    box-shadow: 0 0 6px rgb(0 0 0 / 25%);
+}
+
+.sideBar_coupon_head{
+    background: #2196f3 none repeat scroll 0 0;
+    text-align: center;
+    color: #fff;
+    height: 42px;
+    line-height: 40px;
+}
+
+.sideBar_coupon_input{
+  width: 100%;
+    height: 30px;
+    line-height: 30px;
+    background: #fff;
+    color: #afafaf;
+    font-size: 13px;
+    border-radius: 4px;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid #afafaf;
+    text-transform: uppercase;
+    font-weight: normal;  
+}
+
+.sideBar_coupon_body p{
+    float: left;
+    font-size: 11px;
+    color: #1A942B !important;
+    width: 94%;
+    margin: 0px 3% 0;
+    padding-bottom: 5px;
+    padding-top: 4px;
+}
+
+.sideBar_coupon_c1{
+    padding-bottom: 7px;
+    padding-top: 7px;
+    border-bottom: 1px solid #ebebeb;
+    width: 100%;
+    float: left;
+}
+
+@media screen and (max-width: 900px) {
+   .sideBar_body{
+       display: none;
+   }
+
+   .detail{
+       width: 99%;
+   }
+  }
+
+.insurance_option{
+  border-radius: 0 0 5px 5px;  
+  /* background-color: #f7f7f7; */
+    padding: 0% 2% 1% 2%;
+}
+
+
+  
+
+.insurance_option_div{
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    padding: 12px 15px;
+    margin-bottom: 6px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    font-size: 13px;
+    margin-left: 34px;
+    display: inline-block;
+}
+
+
+
+.insurance_option_yes label{
+width: 95%;
+    padding-top: 8px;
+    font-size: 90%;
+    color: #000000;
+}
+
+.insurance_option_no label{
+ width: 95%;
+     padding-top: 8px;
+    font-size: 90%;
+    color: #000000;
+}
+
+.email_form{
+    width: 80%;
+    float: left;
+    margin-top: 20px;
+    margin-bottom: 3px;
+}
+
+.email_form_header{
+    width: 100%;
+    float: left;
+    font-size: 18px;
+    color: #1a1a1a;
+    text-align: left;
+}  
+
+.email_form_header span{
+    font-size: 11px;
+    color: #8b8a8a;
+    margin-top: 7px;
+}
+
+.email_form_box{
+    width: 64%;
+    font-size: 100%;
+    padding: 2% 2% 2% 2%;
+    border: 1px solid #d2d2d2;
+    border-radius: 4px;
+    color: #000;
+    margin: 10px 0 0;
+    outline: 0 none;
+    box-shadow: 0 2px 4px 0 #c8c8c8;
+}
+
+.email_form_boxL{
+    color: #F44336;
+    padding-top: 4px;
+    font-weight: normal;
+    font-size: 13px;
+}
+
+.email_form_boxbutton{
+    width: 100%;
+    float: left;
+    text-align: center;
+    padding-bottom: 30px;
+    margin-top: 7px;
+}
+
+.email_form_boxbutton span{
+    background: #ef6614 none repeat scroll 0 0;
+    border-radius: 4px;
+    color: #ffffff;
+    cursor: pointer;
+    display: block;
+    font-size: 19px;
+    height: 45px;
+    line-height: 45px;
+    margin: 10px auto auto auto;
+    width: 41%;
+}
+
+.userDetail{
+    float: left;
+    width: 100%;
+    border: 1px solid #d2d2d2;
+    background: #ffffff;
+    border-radius: 4px;
+    box-shadow: 0 0 6px rgb(0 0 0 / 25%);
+}
+
+
+.userDetail_header{
+  width: 100%;
+    float: left;
+    font-size: 18px;
+    color: #1a1a1a;
+    height: 50px;
+    line-height: 50px;
+    background: #f8f6f6;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;  
+}
+
+.userDetail_header::before{
+    float: left;
+    content: " ";
+    background: url("https://flight.easemytrip.com/Content/img/traveller/img-sprite.png");
+    width: 35px;
+    height: 35px;
+    background-position: -92px -85px;
+    margin-top: 8px;
+}
+
+.userDetail_header_info{
+  float: right;
+width: auto;  
+}
+
+.userDetail_header_info_tv{
+    float: right;
+    margin: 0;
+    padding: 0 17px;
+    font-size: 12px;
+    color: #2196f3;
+}
+
+.userDetail_header_info_tv img{
+    width: 21px;
+    height: 16px;
+    margin-right: 7px;
+}
+
+.userDetail_box{
+ box-shadow: 0 0 5px rgb(0 0 0 / 20%);
+    width: 100%;
+    float: left;
+    border-radius: 5px;
+    margin-bottom: 13px;   
+}
+
+.userDetail_box1{
+ display: inline-block;
+    position: relative;
+    margin-bottom: 2px;
+    cursor: pointer;
+    font-size: 18px;   
+}
+
+.userDetail_boxInput{
+    width: 96%;
+    margin: 0 auto;
+    padding-top: 8px;
+}
+
+.userDetail_boxInputselect{
+  width: 16%;
+    float: left;  
+}
+
+.userDetail_boxInputselect select{
+  width: 100%;
+font-size: 15px;
+height: 40px;
+border: 1px solid #d7d5d5;
+padding-left: 6%;
+outline: 0;  
+}
+
+.userDetail_boxInput1{
+  width: 34.5%;
+float: left;  
+ margin-left: 25px;
+}
+
+.userDetail_boxInput1 input{
+    float: left;
+    text-align: left;
+    height: 40px;
+    line-height: 40px;
+    border: 1px solid #d7d5d5;
+    width: 100%;
+    padding-left: 4%;
+    outline: 0;
+    font-size: 15px;
+}
+
+.userDetail_phone{
+    width: 80%;
+    float: left;
+    margin-top: 15px;
+}
+
+.userDetail_phone_head{
+    width: 100%;
+    float: left;
+    font-size: 18px;
+    color: #1a1a1a;
+    text-align: left;
+}
+
+.userDetail_phone_head span{
+    float: left;
+    margin-top: 10px;
+    width: 100%;
+    font-size: 11px;
+    color: #8b8a8a;
+}
+
+.userDetail_phone_body input{
+  width: 64%;
+    font-size: 100%;
+    padding: 2% 2% 2% 2%;
+    border: 1px solid #d2d2d2;
+    border-radius: 4px;
+    color: #000;
+    margin: 10px 0 0;
+    outline: 0 none;
+    box-shadow: 0 2px 4px 0 #c8c8c8;  
+}

@@ -1,169 +1,144 @@
-/* main navbar wrapper */
-.navbarWrapper{
-    /* position: sticky; 
-     top:0; */
-    background-color: white;
-    padding: 1px;
-    z-index: 100;
-}
-/* navbar content */
-.navbarContent{
-    display: flex;
-    padding-bottom: 4px;
-    /* box-shadow: 1px 1px hsla(0, 0%, 53%, 0.687); */
-}
-/* make my trip logo container */
-.logoWrapper{
-    height: auto;
-    display: flex;
- }
- /* make my trip anchor tag logo container */
-
-.logoimg{
-    width: 100%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    margin-left: 50px;
-    /* height: 70px; */
-}
- /* make my trip anchor tag img container */
-.logoimg img{
-    width: 100%;
-    height: 50px;
-}
-
-/* .hamburgr_menu */
-.hamburgr_menu{
-    cursor: pointer;
-    display: none;
-}
-.leftSideNavbar{
-    flex-grow: 1;
+.navbar{
+    height: 55px;
     display: flex;
     justify-content: space-between;
+    border-bottom: 1px solid #E1E4E4;
+    padding-bottom: 10px;
+   padding-left: 20px;
 }
-.rightSideNavbar{
-    flex-grow: 5;
-
-    display: flex;
-    justify-content: space-between;
-    
-}
-.rightSideNavbarMobile{
-    flex-grow: 5;
-    display: flex;
-}
-
-.iconWrapper{
-    display: flex;
-    flex-grow: 12;
-    justify-content: space-evenly;
-    align-items: center;
-}
-.iconWrapper > div{
-    display: grid;
-    place-items: center;
-    color: rgb(85, 84, 84);
-    cursor: pointer;
-}
-
-.iconWrapper > div> span :hover{
-    border: #3339e9;
-} 
- .iconWrapper > div > p  {
-    /* font-size: 0.8em; */
-
-}
-.iconWrapper > div > p:hover{
-    color: red;
-}
-.loginContainer{
-    flex-grow: 2.5;
-    display: grid;
-    place-items: center;
-    cursor: pointer;
-} 
-.loginContainer>button{
-    height: 30px;
-    width: 150px;
-    border-radius: 6px;
-    
-    background-image: linear-gradient(to right, #314755 0%, #26a0da  51%, #314755  100%)
-}
-.loginContainer>button{
-    margin: 10px;
+.logo img{
+    height: 45px;
    
-   align-items: center;
-    text-transform: uppercase;
-    transition: 0.5s;
-    background-size: 200% auto;
-    color: black;     
-    font-size: larger;       
-    box-shadow: 0 0 20px #eee;
-    border-radius: 10px;
-    display: block;
-  }
- 
-  .loginContainer>button:hover {
-    background-position: right center; /* change the direction of the change here */
-    color: #fff;
-    text-decoration: none;
-  }
- 
-.iconwrapper span{
-    display: none;
 }
-.icons {
- display: none;
+.easy{
+    display: flex;
+    align-items: center;
+    text-align: center;
+  font-size: 10px;
+  font-style: italic;
+  margin-top: -15px;
+  color: grey;
+  margin-left: 6px;
 }
 
-@media only screen and (max-width: 768px) {
+.easy hr{
     
-    .hamburgr_menu{
-        display: block;
-        display: grid;
-        place-items:end;
-        align-items: center;
-        margin-right: 3%;
-        font-size: 1.4em;
-    }
-    
-    .rightSideNavbar{
-        display: none;
-    }
-    .flex_display{
-        display: flex;
-    }
-    .rightSideNavbarMobile{
-        display: flex;
-        flex-direction: column;
-    }
-    .navbarContent{
-        flex-direction: column;
-    }
-    .iconWrapper{
-        flex-direction: column;
-        flex-grow: 6;
-    }
-    .iconWrapper > div{
-        margin-top: 10px;
-        width: 80%;
-       font-size: 1.5em;
-        display: flex;
-    }
+    width: 70px;
+    margin-top: 10px;
+    margin-left: 1px;
+}
+.logo{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.left{
+    height: 50px;
+    display: flex;
+    gap: 40px;
+   
+    margin-left: 20px;
+}
+.tabs{
+    display: flex;
+    gap: 15px;
+    font-size: 13px;
+    font-weight: 500;
+margin-top: 5px;
+    text-align: center;
+    align-items:center ;
+}
+.tabs hr{
+  height: 18px;
   
-    .iconWrapper > div > p> span{
-       display: none;
-    }
+  margin-top: 12px; 
 }
-
-
-
-
-
-
-
-
- 
-.btn-grad {}
+.text1,.text2,.text3,.text4,.text5,.text6,.text7,.text8,.text9{
+    display: flex;
+    gap: 10px;
+}
+.text1:hover{
+    color: red;
+    cursor: pointer;
+}
+.text2:hover{
+    color: red;
+    cursor: pointer;
+}
+.text3:hover{
+    color: red;
+    cursor: pointer;
+}
+.text4:hover{
+    color: red;
+    cursor: pointer;
+}
+.text5:hover{
+    color: red;
+    cursor: pointer;
+}
+.text6:hover{
+    color: red;
+    cursor: pointer;
+}
+.text7:hover{
+    color: red;
+    cursor: pointer;
+}
+.text8:hover{
+    color: red;
+    cursor: pointer;
+}
+.text9:hover{
+    color: red;
+    cursor: pointer;
+}
+.rightup{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: -10px;
+   
+}
+.rightup button{
+    background-color: white;
+    border: 1px solid #2196F3;
+     height: 20px;
+     color: #2196F3;
+     border-radius: 4px;
+     font-size: 12px;
+      text-align: center; 
+     align-items: center;
+    
+}
+.helpline{
+    font-size:small ;
+}
+.icon{
+    color: grey;
+}
+.rightup button:hover{
+    background-color: #2196F3;
+    color: white;
+}
+.helpline{
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+.down{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: -13px;
+}
+.right{
+    margin-right: 30px;
+    padding: 4px;
+    display: flex;
+    flex-direction: column;
+}
+.button{
+    font-size: 13px;
+    color: black;
+}
