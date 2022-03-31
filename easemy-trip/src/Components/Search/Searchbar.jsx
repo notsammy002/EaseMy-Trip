@@ -25,7 +25,7 @@ const Searchbar = () => {
     const [date,setDate] =React.useState(null);
     const [returnDate,setReturnDate] =React.useState(null);
      const [data,setData] =useState({})
-      console.log(data)
+      
 
 
 
@@ -86,15 +86,24 @@ const Searchbar = () => {
         alert("Enter the Valid Details")
      }
    else{
+    // Sun Apr 03 2022
+     let arr = date.toDateString().split(" ")
+     arr=arr[2]+arr[1]+"il"+arr[3]
+    
+       let dep  =returnDate.toDateString().split(" ")
+       dep=dep[2]+dep[1]+"il"+dep[3]
+  //  console.log(arr)
+  //  console.log(dep)
     var obj ={
         "From":value,
         "Destination":destination,
-        "booking_date":date.toDateString(),
-        "return_date":returnDate.toDateString()
+        "booking_date":arr,
+        "return_date":dep
     }
     setData(obj)
-    // console.log(obj)
-    //  navigate("/flight")
+    navigate("/flight")
+   
+     
    }
    
    

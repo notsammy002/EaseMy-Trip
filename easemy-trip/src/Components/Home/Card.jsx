@@ -7,17 +7,7 @@ import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 const Card = () => {
   return (
     <div className={style.container}>
-      <div className={style.heading}> 
-
-        <h1>Travel Blog</h1>
-
-       <div  className={style.button}>
-        <ArrowBackIosIcon />
-        <ArrowForwardIosIcon/>
-        </div>
-
-      </div>
-
+      
       <div className={style.crousel}>
         
       <div className={style.card}>
@@ -31,7 +21,7 @@ const Card = () => {
           <span>March 15,2022</span>{" "}
         </div>
       </div>
-      <div className={style.card}>
+      {/* <div className={style.card}>
         <img src="https://www.easemytrip.com/images/offer-img/holi-in-india-hp.jpg" alt="images" className={style.img} />
         <p>
         from phoolon ki holi to lathmar holi, here are different ways to
@@ -65,7 +55,7 @@ const Card = () => {
           <CalendarMonthIcon className={style.icon} />{" "}
           <span>March 16,2022</span>{" "}
         </div>
-      </div>
+      </div> */}
 
       {/* <div className={style.card}>
         <img src="https://www.easemytrip.com/images/offer-img/best-countries-europe-hp.jpg" alt="images" className={style.img} />
