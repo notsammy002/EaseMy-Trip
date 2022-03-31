@@ -1,6 +1,8 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import CheckOut from './Components/Home/CheckOut';
+import Footer from './Components/Home/Footer';
 
 
 import Home from './Components/Home/Home';
@@ -27,9 +29,11 @@ function App() {
      <Routes>
        <Route path="/" element={<Home/>}/>
        <Route path="/flight" element={ <ProductLanding/> }/>
+       <Route path="/Checkout" element={ <CheckOut/> } />
      </Routes>
 
      {/* footer aayega */}
+     <Footer />
     </div>
   );
 }

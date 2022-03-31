@@ -1,0 +1,34 @@
+{
+  "flights": [
+    {
+      "_id": "34",
+      "company_name": "Air India",
+      "company_icon": "https",
+      "departure_time": "0300",
+      "arrival_time": "0400",
+      "user_name": "",
+      "email": "",
+      "phone": "",
+      "title": "",
+      "duration": 1,
+      "from_location": "Delhi",
+      "to_location": "Chennai",
+      "price": 6000,
+      "from_location_code": "DEl",
+      "to_location_code": "CHE",
+      "day": "Monday",
+      "departure_date": "18Aril2022",
+      "arrival_date": "18Aril2022"
+  }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
