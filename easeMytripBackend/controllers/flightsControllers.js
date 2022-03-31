@@ -2,13 +2,16 @@ const Flight = require("../model/FlightsModel");
 
 
 
+
 exports.getFlights = async (req, res) => {
     try {
-      let data = await Flight.find();
+      let data = await Flight.find(req.params);
       res.status(200).json({
         status: "success",
         data: data,
       });
+
+      console.log("Request Hit");
     } catch (err) {
       res.status(404).json({
         status: "failed",
@@ -17,6 +20,27 @@ exports.getFlights = async (req, res) => {
     }
   };
 
+
+
+  exports.getSortedFlights = async (req, res) => {
+
+    let sortParameter = req.params.property
+
+    try {
+      let data = await Flight.find().sort({[sortParameter]:1});
+      res.status(200).json({
+        status: "success",
+        data: data,
+      });
+
+      console.log("Request Hit");
+    } catch (err) {
+      res.status(404).json({
+        status: "failed",
+        message: err,
+      });
+    }
+  };
 
   exports.createFlight = async (req, res) => {
     try {
@@ -33,23 +57,28 @@ exports.getFlights = async (req, res) => {
     }
   };
 
-  // exports.updateFlight = async (req, res) => {
-  //   try {
-  //     let Flight = await Flight.findByIdAndUpdate(req.params.id,req.body, {
-  //       new: true,
-  //       runValidators: true,
-  //     });
-  //     res.status(200).json({
-  //       status: "success",
-  //       data: Flight,
-  //     });
-  //   } catch (err) {
-  //     res.status(404).json({
-  //       status: "failed",
-  //       message: "invalid req send",
-  //     });
-  //   }
-  // };
+
+
+
+
+  exports.updateFlight = async (req, res) => {
+    try {
+      let updated = await Flight.findByIdAndUpdate(req.params.id,req.body, {
+        new: true,
+        runValidators: true,
+      });
+      res.status(200).json({
+        status: "success",
+        data: updated,
+      });
+    } catch (err) {
+      console.log(err);
+      res.status(404).json({
+        status: "failed",
+        message: "invalid req send",
+      });
+    }
+  };
 
   // exports.deleteFlight = async (req, res) => {
   //   try {
