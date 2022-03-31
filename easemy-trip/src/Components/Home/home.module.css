@@ -1,0 +1,157 @@
+.container{
+    width: 85%;
+    margin: auto;
+}
+.info{
+
+ padding: 10px 30px;
+ border-radius: 4px;
+
+}
+.top{
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    text-align: center;
+}
+.bottom{
+   width: 100%; 
+   border: 1px solid #D4EDDA;
+   border-radius: 4px;
+   margin-top: 15px;
+   text-align: center;
+   /* text */
+}
+.link{
+    display: inline;
+ color: #2196F3;
+}
+.info{
+    color: #95646C;
+   background-color: #FFF3CD;
+   border: 1px solid #F1DFAB;
+   width: 100%;
+}
+.info span{
+    color:#9C7504;
+    font-weight: 600;
+    display: inline;
+    /* display: flex; */
+}
+.info .link1{
+    font-weight: normal;
+   text-decoration: underline;
+}
+.link1:hover{
+    /* color: red; */
+    cursor: pointer;
+
+}
+
+.guide{
+    background-color:#D9EDF7 ;
+    border: 1px solid #BCE8F1;
+    width: 100%;
+    padding: 10px 30px;
+ border-radius: 4px;
+
+}
+
+.guide p{
+    color: #3183BB;
+    text-decoration: underline;
+    display: inline;
+}
+.guide p:hover{
+    cursor: pointer;
+}
+.guide span{
+    color: #31708F;
+    font-weight: 600;
+    /* text-decoration: none; */
+   
+}
+
+.inner span{
+    color:#155724;
+    font-weight: 600;
+}
+.inner{
+    color: #155724;
+    background-color: #D4EDDA;
+    padding: 10px 50px;
+ 
+}
+.inner .link{
+    color: #2196F3;
+    text-decoration: underline;
+    font-weight: normal;
+}
+.link{
+    cursor: pointer;
+}
+.exclusive{
+    display: flex;
+    /* justify-content: center; */
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+   margin-top: -15px;
+   margin-bottom: -15px;
+}
+.h{
+    display: flex;
+    gap: 20px;
+    
+    padding-top: 25px;
+    font-weight: 400;
+    /* padding-top: 5px;
+    padding-bottom: 5px;
+    margin: 3px; */
+}
+
+.headings{
+    display: flex;
+    /* justify-content: space-between; */
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin: 10px;
+    /* padding: 10px; */
+    margin-bottom: 10px;
+    
+}
+
+.h h4 hr{
+    /* padding:30px 1px; */
+    border: 2px solid #2196F3;
+    /* background-color: blue; */
+    visibility: hidden;
+}
+
+.h h4:hover hr{
+    /* border-bottom: 3px solid blue; */
+    visibility: visible;
+}
+.first{
+    color: #2196F3;
+      
+}
+
+
+.search_flight_info{
+    margin-top: 50px;
+}
+.search_flight_info p{
+ margin-top: -17px;
+ font-size: 14px;
+ 
+}
+.heading_news{
+    display: flex;
+    gap: 510px;
+ margin-top: 40px;
+ font-size: xx-large;
+ font-weight: 600;
+}

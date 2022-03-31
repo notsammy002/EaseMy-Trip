@@ -1,0 +1,144 @@
+.navbar{
+    height: 55px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #E1E4E4;
+    padding-bottom: 10px;
+   padding-left: 20px;
+}
+.logo img{
+    height: 45px;
+   
+}
+.easy{
+    display: flex;
+    align-items: center;
+    text-align: center;
+  font-size: 10px;
+  font-style: italic;
+  margin-top: -15px;
+  color: grey;
+  margin-left: 6px;
+}
+
+.easy hr{
+    
+    width: 70px;
+    margin-top: 10px;
+    margin-left: 1px;
+}
+.logo{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.left{
+    height: 50px;
+    display: flex;
+    gap: 40px;
+   
+    margin-left: 20px;
+}
+.tabs{
+    display: flex;
+    gap: 15px;
+    font-size: 13px;
+    font-weight: 500;
+margin-top: 5px;
+    text-align: center;
+    align-items:center ;
+}
+.tabs hr{
+  height: 18px;
+  
+  margin-top: 12px; 
+}
+.text1,.text2,.text3,.text4,.text5,.text6,.text7,.text8,.text9{
+    display: flex;
+    gap: 10px;
+}
+.text1:hover{
+    color: red;
+    cursor: pointer;
+}
+.text2:hover{
+    color: red;
+    cursor: pointer;
+}
+.text3:hover{
+    color: red;
+    cursor: pointer;
+}
+.text4:hover{
+    color: red;
+    cursor: pointer;
+}
+.text5:hover{
+    color: red;
+    cursor: pointer;
+}
+.text6:hover{
+    color: red;
+    cursor: pointer;
+}
+.text7:hover{
+    color: red;
+    cursor: pointer;
+}
+.text8:hover{
+    color: red;
+    cursor: pointer;
+}
+.text9:hover{
+    color: red;
+    cursor: pointer;
+}
+.rightup{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: -10px;
+   
+}
+.rightup button{
+    background-color: white;
+    border: 1px solid #2196F3;
+     height: 20px;
+     color: #2196F3;
+     border-radius: 4px;
+     font-size: 12px;
+      text-align: center; 
+     align-items: center;
+    
+}
+.helpline{
+    font-size:small ;
+}
+.icon{
+    color: grey;
+}
+.rightup button:hover{
+    background-color: #2196F3;
+    color: white;
+}
+.helpline{
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+.down{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: -13px;
+}
+.right{
+    margin-right: 30px;
+    padding: 4px;
+    display: flex;
+    flex-direction: column;
+}
+.button{
+    font-size: 13px;
+    color: black;
+}
