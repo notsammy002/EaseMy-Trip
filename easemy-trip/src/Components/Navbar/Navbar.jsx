@@ -1,103 +1,127 @@
-import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import styles from "./Navbar.module.css";
+import React from 'react'
+import style from "./Navbar.module.css"
+import { BsHeadset } from "react-icons/bs";
+import { BsGlobe } from "react-icons/bs";
+import { Link, useNavigate } from 'react-router-dom';
+import Button from '@mui/material/Button';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
+import { VscAccount } from "react-icons/vsc";
 
-import MenuIcon from "@mui/icons-material/Menu";
-import CloseIcon from "@mui/icons-material/Close";
 
 const Navbar = () => {
-  const [open, setOpen] = useState(false);
-  const [login, toggleLogin] = useState(false);
-
-  const navigate = useNavigate();
+  const navigate=useNavigate()
+  const [anchorEl, setAnchorEl] = React.useState(null);
+  const open = Boolean(anchorEl);
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
 
   return (
-    <>
-      <nav className={styles.navbarWrapper}>
-        <div className={styles.navbarContent}>
-          {/* 1st part of navbar .ie. left side of navbar */}
-          <div className={styles.leftSideNavbar}>
-            {/* logo wrapper */}
-            <div className={styles.logoWrapper}>
-              <Link to="/" className={styles.logoimg}>
-                <img
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7OJBtyg40cYXaD9uhpbM0WqMSCdjJvwrsiQ&usqp=CAU"
-                  alt="Logo"
-                />
-              </Link>
-            </div>
-            {/* hamberger menu */}
-            <div
-              className={styles.hamburgr_menu}
-              onClick={() => setOpen(!open)}
-            >
-              {open ? (
-                <CloseIcon style={{ fontSize: "1.4em" }} />
-              ) : (
-                <MenuIcon style={{ fontSize: "1.4em" }} />
-              )}
-            </div>
-          </div>
+    <div className={style.navbar}>
+      <div className={style.left}>
+       <div className={style.logo}>
+         <Link to="/">
+         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7OJBtyg40cYXaD9uhpbM0WqMSCdjJvwrsiQ&usqp=CAU" alt="" />
+         </Link>
+         
+        <div className={style.easy}>  <p>Take it Easy </p> <hr /></div>
+       </div>
+       <div  className={style.tabs}>
+         <div className={style.text1}>
+         
+          <p onClick={()=>navigate("/flight")}>FLIGHTS</p>
+           
+         
+          <hr />
+         </div>
+         <div className={style.text2}>
+          <p onClick={()=>navigate("/hotel")}>HOTELS</p>
+          <hr />
+         </div>
+         <div className={style.text3}>
+          <p>FLIGHT + HOTEL</p>
+          <hr />
+         </div>
+         <div className={style.text4}>
+          <p>TRAINS</p>
+          <hr />
+         </div>
+         <div className={style.text5}>
+          <p>BUS</p>
+          <hr />
+         </div>
+         <div className={style.text6}>
+          <p>HOLIDAYS</p>
+          <hr />
+         </div>
+         <div className={style.text7}>
+          <p>CABS</p>
+          <hr />
+         </div>
+         <div className={style.text8}>
+          <p>CRUISE</p>
+          <hr />
+         </div>
+         <div className={style.text9}>
+          <p>MORE</p>
+          
+         </div>
+        
+         
+       </div>
+       </div>
+       <div className={style.right}>
 
-          {/* 2nd part of navbar will start which contains logo and login */}
-
-          <div
-            className={
-              open ? styles.rightSideNavbarMobile : styles.rightSideNavbar
-            }
-          >
-            {/* icons container */}
-            <div className={styles.iconWrapper}>
-              <div onClick={() => {
-                navigate("/flight")}}>
-                <p>
-                  Flights &nbsp; <span className={styles.line}>|</span>
-                </p>
-              </div>
-              <div onClick={() => navigate("/hotel")}>
-                <p>
-                  Hotels &nbsp; <span className={styles.line}>|</span>
-                </p>
-              </div>
-              <div>
-                <p>
-                  Trains &nbsp; <span className={styles.line}>|</span>
-                </p>
-              </div>
-              <div>
-                <p>
-                  Buses &nbsp; <span className={styles.line}>|</span>
-                </p>
-              </div>
-              <div>
-                <p>
-                  Holiday &nbsp; <span className={styles.line}>|</span>
-                </p>
-              </div>
-              <div>
-                <p>
-                  Cabs &nbsp; <span className={styles.line}>|</span>
-                </p>
-              </div>
-
-              <div>
-                <p>More</p>
-              </div>
-            </div>
-
-            {/* login container */}
-            <div className={styles.loginContainer}>
-              {login ? (
-                <button onClick={() => toggleLogin(!login)}>Logout</button>
-              ) : (
-                <button onClick={() => toggleLogin(!login)}>Login</button>
-              )}
-            </div>
+        <div className={style.rightup}>
+          <button>Manage My Booking</button>
+          <div className={style.helpline}><BsHeadset className={style.icon}/>
+          <p>24 x 7 Helpline</p> &nbsp;&nbsp;
+          <BsGlobe/> &nbsp;
+           English
           </div>
         </div>
-      </nav>
-    </>
-  );
-};
+        <div className={style.down}>
+        <VscAccount/>
+        <div>
+      <Button
+        id="demo-positioned-button"
+        aria-controls={open ? 'demo-positioned-menu' : undefined}
+        aria-haspopup="true"
+        aria-expanded={open ? 'true' : undefined}
+        onClick={handleClick}
+        style={{color:"black"}}
+      >
+        My Account
+      </Button>
+      <Menu
+        id="demo-positioned-menu"
+        aria-labelledby="demo-positioned-button"
+        anchorEl={anchorEl}
+        open={open}
+        onClose={handleClose}
+        anchorOrigin={{
+          vertical: 'top',
+          horizontal: 'left',
+        }}
+        transformOrigin={{
+          vertical: 'top',
+          horizontal: 'left',
+        }}
+      >
+        {/* <MenuItem onClick={handleClose}>Profile</MenuItem> */}
+        <MenuItem onClick={handleClose}>My account</MenuItem>
+        <MenuItem onClick={handleClose}>Login or Signup</MenuItem>
+      </Menu>
+    </div>
+        </div>
+       </div>
 
-export default Navbar;
+    </div>
+  )
+}
+
+export default Navbar
