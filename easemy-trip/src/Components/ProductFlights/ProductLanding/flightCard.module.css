@@ -1,0 +1,172 @@
+.flightCardContainer{
+    background-color: white;
+    margin-top: 21px;
+    box-shadow:0 0 7px rgb(0 0 0 / 20%);
+    transition: all .3s ease-out;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.flightCardContainer:hover {
+    box-shadow:0 0 7px rgb(0 0 0 / 70%);
+}
+
+.showAccordian1{
+    overflow: hidden;
+}
+
+.dontShowAccordian1{
+    overflow: hidden;
+    height: 0px;
+}
+
+.detailContainer{
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    align-items: center;
+    box-sizing: border-box;
+    padding-bottom: 10px;
+    
+}
+.icon{
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    margin-left: 8px;
+   
+}
+
+.icon img{
+    width: auto;
+    height: 35px;
+}
+
+.companyName{
+    font-size: 12px;
+    margin-left: 30px;
+}
+
+.flightCode{
+    color: rgba(0, 0, 0, 0.507);
+}
+
+.startingTime{
+    position: relative;
+    right: 33px;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.from_location{
+    font-size: 13px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.63);
+    text-align: center;
+}
+
+
+
+.arrivalTime{
+    position: relative;
+    right: 25px;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.to_location{
+    font-size: 13px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.63);
+    text-align: center;
+}
+
+
+
+.duration{
+display: flex;
+flex-direction: column;
+justify-content: center;
+position: relative;
+    right: 28px;
+text-align: center;
+}
+
+.arrow{
+background-image: url("https://flight.easemytrip.com/Content/img/arow_main.png");
+height: 8px;
+width: 110px;
+}
+
+.durationExact{
+    font-size: 13px;
+}
+
+.stop{
+    font-size: 11px;
+}
+
+.priceContainer{
+    box-sizing: border-box;
+    padding-top: 12px;
+    position: relative;
+    right: 18px;
+}
+
+.priceContainer button{
+    font-size: 12px;
+    font-weight: 500;
+    
+
+    color: #2196f3;
+    border: 1px solid #2196f3;
+    border-radius: 20px;
+    padding: 3px 10px;
+    text-decoration: none;
+    margin-top: 5px;
+    float: left;
+    cursor: pointer;
+    MARGIN-LEFT: -16px;
+    background-color: transparent;
+}
+
+.price{
+    font-size: 21px;
+    color: #d63b05;
+    padding-left: 0;
+    line-height: 1.3em;
+}
+
+.bookNowButton{
+    box-sizing: border-box;
+    padding-bottom: 12px;
+}
+
+.bookNowButton button{
+    background-color: #ef6614;
+    text-shadow: none;
+    color: white;
+    outline: none;
+
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    cursor: pointer;
+
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857;
+    box-sizing: border-box;
+    padding: 6px 12px;
+    text-align: center;
+    margin-top: 12px;
+    margin-right: 18px;
+   height: 34px;
+   width: 114px;
+}
+
+.bookNowButton button:hover{
+    background-color:  #c24f0d;
+}

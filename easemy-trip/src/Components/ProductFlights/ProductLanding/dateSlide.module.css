@@ -1,0 +1,41 @@
+.dateSection {
+  box-sizing: border-box;
+  height: 55px;
+  min-width: 105px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: white;
+  margin-left: 2px;
+  border-left: 1px solid rgba(0, 0, 0, 0.274)
+}
+
+.dateSection:hover{
+    background-color: rgb(245,245,245);
+}
+
+.dateSection .date {
+  font-family: "Open Sans", sans-serif;
+  font-size: 13px;
+
+}
+
+.dateSection .price{
+    font-size: 14px;
+    color: rgb(239,102,20);
+    word-spacing: -2px;
+}
+
+.calenderIcon{
+    background-color: white;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding-top: 2px;
+    width: 63px;
+    border-left: 1px solid rgba(0, 0, 0, 0.274)
+}
