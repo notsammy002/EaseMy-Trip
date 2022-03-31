@@ -1,0 +1,79 @@
+.container{
+  text-transform: capitalize;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+  padding: 10px;
+
+}
+
+.crousel{
+    display: flex;
+    margin-top: 10px;
+    gap: 14px;
+    width: 1100px;
+}
+.heading{
+    display: flex;
+  text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    /* padding: 20px; */
+}
+.card{
+ /* background-color: brown;  */
+ box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+ width: 25% ;
+ border-radius: 6px;
+ border: 1px solid  #E1E4E4;
+ /* overflow: hidden; */
+ height: 220px;
+ 
+
+}
+.button{
+    display: flex;
+    width: 70px;
+    justify-content: space-around;
+    box-sizing: border-box;
+    padding: 4px;
+ /* border: 1px solid; */
+ overflow: hidden;
+  
+
+}
+.card:hover{
+    cursor: pointer;
+}
+
+
+.img{
+    height: 138px ;
+    width: 275px ;
+    /* width: 25%; */
+    border: 10px;
+    border-radius: 6px 6px 0 0;
+   
+}
+.date{
+    display: flex;
+   
+    align-items: center;
+    justify-content: right;
+/* padding: 10px; */
+margin: 10px;
+    
+}
+.icon{
+    color: grey;
+}
+.card p{
+    margin: 8px;
+    font-size: 13px;
+}
+.date span{
+    color: gray;
+    font-size: 10px;
+}
