@@ -1,0 +1,59 @@
+.outerDiv {
+  width: max-content;
+  height: max-content;
+  /* height: 270px; */
+  border: 1px solid d2d2d2;
+  box-shadow: 0 0 6px rgb(0 0 0 / 25%);
+  border-radius: 4px;
+  background-color: white;
+  padding-bottom: 0.2em;
+  margin-top: 1em;
+  padding: 0 1em;
+}
+
+.flexdiv {
+  display: grid;
+  grid-template-columns: 47% 45%;
+  gap: 1em;
+  place-items: center;
+}
+.summary1 {
+  display: flex;
+  place-items: center;
+  float: left;
+  gap: 0.5em;
+  padding-left: -5em;
+}
+
+.summary {
+  display: flex;
+  place-items: center;
+  float: left;
+  gap: 1em;
+  padding-left: 5em;
+}
+
+.priceForIndividual {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #e5e3e3;
+}
+
+.priceForIndividual .detail {
+  font-size: 0.8em;
+  font-weight: 300;
+}
+.priceForIndividual .price {
+  font-size: 0.8em;
+  font-weight: 620;
+}
+.priceForIndividual .grandTotal {
+  color: #d63b05;
+  padding-left: 4%;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.icon {
+  font-size: 35px;
+}

@@ -1,0 +1,77 @@
+.div {
+  height: 100%;
+  margin-top: 5em;
+  display: flex;
+  justify-content: center;
+}
+
+.loginDiv {
+  background: #fff none repeat scroll 0 0;
+  border-radius: 4px;
+  box-shadow: 0 0 7px -2px #000;
+  /* float: left; */
+  height: auto;
+  margin: 0;
+  padding: 2em;
+  width: 25%;
+}
+
+.loginText {
+  font-weight: 500;
+  color: #1b1b1b;
+  text-align: center;
+}
+
+.loginText2 {
+  font-weight: 500;
+  color: #1b1b1b;
+  font-size: 14px;
+}
+.spanLogin {
+  border-bottom: 1px solid rgba(45, 103, 178, 0.55);
+  color: #2d67b2;
+  cursor: pointer;
+}
+
+.form {
+  margin-left: 1em;
+}
+
+.labelLogin {
+  width: 100%;
+  float: left;
+  color: #444;
+  font-size: 13px;
+  line-height: 4em;
+  font-weight: 400;
+}
+
+.inputLogin {
+  padding: 12px 10px;
+  outline: 0;
+  font-size: 15px;
+  color: #000000;
+  border: 1px solid #848181;
+  background: transparent;
+  width: 85%;
+}
+
+.submitButton {
+  border: medium none;
+  border-radius: 5px;
+  color: #fff;
+  background: rgba(45, 103, 178, 0.55);
+  cursor: pointer;
+  font-family: Tahoma, Geneva, sans-serif;
+  font-size: 17px;
+  font-weight: normal;
+  height: 43px;
+  -webkit-appearance: none;
+  text-align: center;
+  width: 85%;
+  margin: 40px 10px;
+}
+
+.submitButtonColor {
+  background: #2d67b2;
+}
