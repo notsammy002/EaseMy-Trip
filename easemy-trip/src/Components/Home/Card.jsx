@@ -22,7 +22,9 @@ const Card = () => {
         
       <div className={style.card}>
         <img src="https://www.easemytrip.com/images/offer-img/best-countries-europe-hp.jpg" alt="images" className={style.img} />
-        <p>know about 12 of the most colorful places in the world</p>
+        <p>
+        Discover the best and the most Beautiful Countries of Europe
+        </p>
         <div className={style.date}>
           {" "}
           <CalendarMonthIcon className={style.icon} />{" "}
@@ -32,8 +34,8 @@ const Card = () => {
       <div className={style.card}>
         <img src="https://www.easemytrip.com/images/offer-img/holi-in-india-hp.jpg" alt="images" className={style.img} />
         <p>
-          Discover the most Worthy Helicopters rides in india for a true
-          exploration
+        from phoolon ki holi to lathmar holi, here are different ways to
+          celebrate in india
         </p>
 
         <div className={style.date}>
@@ -45,8 +47,8 @@ const Card = () => {
       <div className={style.card}>
         <img src="https://www.easemytrip.com/images/offer-img/colorful-places-world-hp.jpg" alt="images" className={style.img} />
         <p>
-          from phoolon ki holi to lathmar holi, here are different ways to
-          celebrate in india
+        know about 12 of the most colorful places in the world
+        
         </p>
         <div className={style.date}>
           {" "}
@@ -56,7 +58,8 @@ const Card = () => {
       </div>
       <div className={style.card}>
         <img src="https://www.easemytrip.com/images/offer-img/helicopter-rides-india-hp.jpg" alt="images" className={style.img} />
-        <p>Discover the best and the most Beautiful Countries of Europe </p>
+        <p>  Discover the most Worthy Helicopters rides in india for a true
+          exploration </p>
         <div className={style.date}>
           {" "}
           <CalendarMonthIcon className={style.icon} />{" "}
@@ -64,7 +67,7 @@ const Card = () => {
         </div>
       </div>
 
-      <div className={style.card}>
+      {/* <div className={style.card}>
         <img src="https://www.easemytrip.com/images/offer-img/best-countries-europe-hp.jpg" alt="images" className={style.img} />
         <p>know about 12 of the most colorful places in the world</p>
         <div className={style.date}>
@@ -106,7 +109,7 @@ const Card = () => {
           <CalendarMonthIcon className={style.icon} />{" "}
           <span>March 16,2022</span>{" "}
         </div>
-      </div>
+      </div> */}
 
       </div>
 

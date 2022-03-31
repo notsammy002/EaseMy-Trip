@@ -24,7 +24,7 @@
 }
 .link{
     display: inline;
- color: blue;
+ color: #2196F3;
 }
 .info{
     color: #95646C;
@@ -83,7 +83,7 @@
  
 }
 .inner .link{
-    color: blue;
+    color: #2196F3;
     text-decoration: underline;
     font-weight: normal;
 }
@@ -125,7 +125,7 @@
 
 .h h4 hr{
     /* padding:30px 1px; */
-    border: 2px solid blue;
+    border: 2px solid #2196F3;
     /* background-color: blue; */
     visibility: hidden;
 }
@@ -135,7 +135,23 @@
     visibility: visible;
 }
 .first{
-    color: blue;
-  
-    
+    color: #2196F3;
+      
+}
+
+
+.search_flight_info{
+    margin-top: 50px;
+}
+.search_flight_info p{
+ margin-top: -17px;
+ font-size: 14px;
+ 
+}
+.heading_news{
+    display: flex;
+    gap: 510px;
+ margin-top: 40px;
+ font-size: xx-large;
+ font-weight: 600;
 }
