@@ -32,9 +32,9 @@ export const FlightCard = ({demo}) => {
         {" "}
         <div className={styles.icon} > <img src={demo.company_icon} alt="/" /> <div className={styles.companyName} > <div>{demo.company_name}</div> <div className={styles.flightCode} >I5-753</div> </div> </div>
         
-        <div className={styles.startingTime} >  <div>{demo.departure_time}</div> <div className={styles.from_location} >{demo.from_location}</div> </div>
-        <div className={styles.duration} > <div className={styles.durationExact}> {demo.duration}</div>  <div className={styles.arrow} > </div>  <div className={styles.stop} >{demo.stop}-stop</div> </div>
-        <div className={styles.arrivalTime}>  <div>{demo.arrival_time}</div> <div className={styles.to_location} >{demo.to_location}</div> </div>
+        <div className={styles.startingTime} >  <div>{demo.departure_time[0]+demo.departure_time[1]+":"+demo.departure_time[2]+demo.departure_time[3]}</div> <div className={styles.from_location} >{demo.from_location}</div> </div>
+        <div className={styles.duration} > <div className={styles.durationExact}> {`0${demo.duration}h 00m`}</div>  <div className={styles.arrow} > </div>  <div className={styles.stop} >{demo.stop}-stop</div> </div>
+        <div className={styles.arrivalTime}>  <div>{demo.arrival_time[0]+demo.arrival_time[1]+":"+demo.arrival_time[2]+demo.arrival_time[3]}</div> <div className={styles.to_location} >{demo.to_location}</div> </div>
         <div className={styles.priceContainer}> <div className={styles.price}>₹ {stateShow}</div> <button onClick={()=>{setShowAccordian1((prev)=>(!prev))}} >+ More Fare</button></div>
         <div className={styles.bookNowButton} ><button >BOOK NOW</button></div> 
         

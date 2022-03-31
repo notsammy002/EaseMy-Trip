@@ -1,7 +1,6 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
 import Tabs, { tabsClasses } from "@mui/material/Tabs";
-import Tab from "@mui/material/Tab";
 import { FaRegCalendarAlt } from "react-icons/fa";
 import styles from "./dateSlide.module.css";
 

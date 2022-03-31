@@ -48,7 +48,8 @@ const Navbar = () => {
           >
             {/* icons container */}
             <div className={styles.iconWrapper}>
-              <div onClick={() => navigate("/flight")}>
+              <div onClick={() => {
+                navigate("/flight")}}>
                 <p>
                   Flights &nbsp; <span className={styles.line}>|</span>
                 </p>

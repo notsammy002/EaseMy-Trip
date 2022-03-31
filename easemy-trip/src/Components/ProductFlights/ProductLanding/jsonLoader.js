@@ -48,3 +48,59 @@
 // a[c] = 45
 // console.log(a);
 // console.log(a[b]);
+
+let stop = [{
+  color: "purple",
+  type: "minivan",
+  registration: new Date('2012-02-03'),
+  capacity: 7
+},{
+    color: "red",
+    type: "minivan",
+    registration: new Date('2012-02-03'),
+    capacity: 7
+  },{
+    color: "blue",
+    type: "minivan",
+    registration: new Date('2012-02-03'),
+    capacity: 7
+  }]
+
+  const filter = {
+    company_name: {},
+    company_icon: {},
+    departure_time: {},
+    arrival_time: {},
+    duration: {},
+    from_location: {},
+    to_location: {},
+    price: {},
+    stop: {},
+    from_location_code: {},
+    to_location_code: {},
+    day: {},
+    departure_date: {},
+    arrival_date: {}
+  }
+
+
+
+
+
+
+
+
+  let filter = {color:{}}
+
+  let state =  state.data.data.filter((elem)=>{
+    
+      if(!Object.keys(state.filter.company_name).length){
+          return elem
+      }
+
+      if(state.filter.company_name[elem.company_name]){
+        return elem
+      }
+  })
+
+  console.log(newArr);

@@ -1,151 +1,61 @@
 import { Switch } from "@mui/material";
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 import DateSlider from "./DateSlider";
 import { FlightCard } from "./FlightCard";
 import styles from "./rightContainer.module.css";
 
-const data = 
-   [ {
-      company_name: "AirAsia",
-      company_icon: "https://flight.easemytrip.com/Content/AirlineLogon/I5.png",
-      departure_time: "13:00",
-      arrival_time: "14:50",
-      duration: "01h 50m",
-      from_location: "Delhi",
-      to_location: "Mumbai",
-      price: "5850",
-      stop: "one",
-      from_location_code: "DEL",
-      to_location_code: "BOM",
-      day: "Sat",
-      departure_date: "16April2022",
-      arrival_date: "16April2022"
-    }, {
-      company_name: "AirAsia",
-      company_icon: "https://flight.easemytrip.com/Content/AirlineLogon/I5.png",
-      departure_time: "13:00",
-      arrival_time: "14:50",
-      duration: "01h 50m",
-      from_location: "Delhi",
-      to_location: "Mumbai",
-      price: "5850",
-      stop: "one",
-      from_location_code: "DEL",
-      to_location_code: "BOM",
-      day: "Sat",
-      departure_date: "16April2022",
-      arrival_date: "16April2022"
-    }, {
-      company_name: "AirAsia",
-      company_icon: "https://flight.easemytrip.com/Content/AirlineLogon/I5.png",
-      departure_time: "13:00",
-      arrival_time: "14:50",
-      duration: "01h 50m",
-      from_location: "Delhi",
-      to_location: "Mumbai",
-      price: "5850",
-      stop: "one",
-      from_location_code: "DEL",
-      to_location_code: "BOM",
-      day: "Sat",
-      departure_date: "16April2022",
-      arrival_date: "16April2022"
-    }, {
-      company_name: "AirAsia",
-      company_icon: "https://flight.easemytrip.com/Content/AirlineLogon/I5.png",
-      departure_time: "13:00",
-      arrival_time: "14:50",
-      duration: "01h 50m",
-      from_location: "Delhi",
-      to_location: "Mumbai",
-      price: "5850",
-      stop: "one",
-      from_location_code: "DEL",
-      to_location_code: "BOM",
-      day: "Sat",
-      departure_date: "16April2022",
-      arrival_date: "16April2022"
-    }, {
-      company_name: "AirAsia",
-      company_icon: "https://flight.easemytrip.com/Content/AirlineLogon/I5.png",
-      departure_time: "13:00",
-      arrival_time: "14:50",
-      duration: "01h 50m",
-      from_location: "Delhi",
-      to_location: "Mumbai",
-      price: "5850",
-      stop: "one",
-      from_location_code: "DEL",
-      to_location_code: "BOM",
-      day: "Sat",
-      departure_date: "16April2022",
-      arrival_date: "16April2022"
-    }, {
-      company_name: "AirAsia",
-      company_icon: "https://flight.easemytrip.com/Content/AirlineLogon/I5.png",
-      departure_time: "13:00",
-      arrival_time: "14:50",
-      duration: "01h 50m",
-      from_location: "Delhi",
-      to_location: "Mumbai",
-      price: "5850",
-      stop: "one",
-      from_location_code: "DEL",
-      to_location_code: "BOM",
-      day: "Sat",
-      departure_date: "16April2022",
-      arrival_date: "16April2022"
-    }, {
-      company_name: "AirAsia",
-      company_icon: "https://flight.easemytrip.com/Content/AirlineLogon/I5.png",
-      departure_time: "13:00",
-      arrival_time: "14:50",
-      duration: "01h 50m",
-      from_location: "Delhi",
-      to_location: "Mumbai",
-      price: "5850",
-      stop: "one",
-      from_location_code: "DEL",
-      to_location_code: "BOM",
-      day: "Sat",
-      departure_date: "16April2022",
-      arrival_date: "16April2022"
-    }, {
-      company_name: "AirAsia",
-      company_icon: "https://flight.easemytrip.com/Content/AirlineLogon/I5.png",
-      departure_time: "13:00",
-      arrival_time: "14:50",
-      duration: "01h 50m",
-      from_location: "Delhi",
-      to_location: "Mumbai",
-      price: "5850",
-      stop: "one",
-      from_location_code: "DEL",
-      to_location_code: "BOM",
-      day: "Sat",
-      departure_date: "16April2022",
-      arrival_date: "16April2022"
-    }]
+import { useDispatch } from "react-redux";
+import { fetchFlightData } from "../../../store/flightDataActions";
+import { flightDataActions } from "../../../store/flightDataSlice";
+
+const date = "17April2022";
 
 export const RightContainer = () => {
+  const dispatch = useDispatch();
+  const flightData = useSelector((state) => state.flightData.data);
+  useEffect(() => {
+    dispatch(fetchFlightData(date));
+  }, [dispatch]);
+
+  console.log(flightData);
   return (
     <div>
       <DateSlider />
       <div className={styles.titleBarContainer}>
         <div className={styles.titleBar}>
-          <span>AIRLINES</span>
-          <span>DEPART</span>
-          <span>DURATION</span>
-          <span>ARRIVE</span>
-          <span>PRICE</span>
-          <span>RECOMMENDED </span>
+          <span style={{cursor:"pointer"}}>AIRLINES</span>
+          <span
+          style={{cursor:"pointer"}}
+            onClick={() =>
+              dispatch(flightDataActions.sortHighToLow("departure_time"))
+            }
+          >
+            DEPART
+          </span>
+          <span
+          style={{cursor:"pointer"}}
+            onClick={() =>
+              dispatch(flightDataActions.sortHighToLow("duration"))
+            }
+          >
+            DURATION
+          </span>
+          <span style={{cursor:"pointer"}}>ARRIVE</span>
+          <span
+          style={{cursor:"pointer"}}
+            onClick={() => dispatch(flightDataActions.sortHighToLow("price"))}
+          >
+            PRICE
+          </span>
+          <span >RECOMMENDED </span>
         </div>
         <Switch sx={{ position: "relative", top: "10px" }} />
       </div>
-      {data.map((demo)=>{
-        return  <FlightCard  demo={demo}/>
+      {/* Optional chaining */}
+      {(flightData.data || []).map((demo) => {
+        return <FlightCard key={demo._id} demo={demo} />;
       })}
-     
     </div>
   );
 };
