@@ -1,0 +1,51 @@
+.container{
+    /* background-color: brown; */
+    text-transform: capitalize;
+    display: flex;
+    gap: 10px;
+
+}
+.card{
+    display: flex;
+    gap: 5px;
+    border-radius: 5px;
+    width: 375px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+.img{
+    margin: 15px;
+    border-radius: 6px;
+     height: 105px
+}
+.offer{
+    height: 105px;
+    box-sizing: border-box;
+}
+.code{
+
+ display: flex;
+ margin-top: -20px ;
+ align-items: center;
+}
+.code>h5{
+
+  border: 1px dotted;
+  border-color: grey;
+  padding: 6.5px;
+  border-radius: 2px;
+}
+.h4{
+   margin-top: 15px;
+    
+}
+.text{
+    margin-top: -15px;
+    font-size: 12.5px;
+}
+.icon{
+    border: 1px dotted;
+    padding: 3px;
+    border-color: grey;
+    color: grey;
+    border-radius: 2px;
+}

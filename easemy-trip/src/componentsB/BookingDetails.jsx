@@ -10,7 +10,7 @@ export const BookingDetails = () => {
     return (
         <div className={styles.outerDiv}>
             <div className={styles.firstPara}>
-                <div className={styles.edt}></div>
+                {/* <div className={styles.edt}></div> */}
                 <p style={{ fontWeight: '500', paddingTop: '10px' }}>Booking Details</p>
             </div>
             <div className={styles.flightsContainer}>

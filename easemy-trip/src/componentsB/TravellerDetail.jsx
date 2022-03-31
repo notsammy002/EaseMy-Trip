@@ -5,7 +5,7 @@ export const TravellerDetail = () => {
     return (
         <div className={styles.outerDiv}>
             <div className={styles.firstPara}>
-                <div className={styles.edt}></div>
+                {/* <div className={styles.edt}></div> */}
                 <p style={{ fontWeight: '500', paddingTop: '10px' }}>Traveller Details</p>
             </div>
 
