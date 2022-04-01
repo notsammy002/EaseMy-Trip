@@ -26,22 +26,27 @@ function App() {
   //   dispatch(fetchFlightData())
   // },[dispatch])
 
+  const [isToken, setIsToken] = React.useState(null);
+
   return (
     <div className="App">
-      <Navbar />
+      <Navbar isToken={isToken} setIsToken={setIsToken} />
 
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/flight" element={<ProductLanding />} />
         <Route path="/Checkout" element={<CheckOut />} />
         <Route path="/check" element={<Payments />} />
-        <Route path="/login" element={<Login />} />
+        <Route
+          path="/login"
+          element={<Login isToken={isToken} setIsToken={setIsToken} />}
+        />
         <Route path="/register" element={<Register />} />
       </Routes>
 
       {/* footer aayega */}
 
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

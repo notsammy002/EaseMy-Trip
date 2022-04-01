@@ -6,6 +6,8 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import img1 from "../Navbar/img1.PNG"
 import TopFlight from "./TopFlight";
+import Footer from "./Footer";
+
 // import Searchbar from "../Search/Searchbar";
 import Search from "../Search/Search";
 const Home = () => {
@@ -78,6 +80,7 @@ const Home = () => {
 
      <img src={img1} alt="" />
 
+     <Footer />
     </>
   );
 };

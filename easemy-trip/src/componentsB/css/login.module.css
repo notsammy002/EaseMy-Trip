@@ -74,4 +74,17 @@
 
 .submitButtonColor {
   background: #2d67b2;
+  border: medium none;
+  border-radius: 5px;
+  color: #fff;
+  /* background: rgba(45, 103, 178, 0.55); */
+  cursor: pointer;
+  font-family: Tahoma, Geneva, sans-serif;
+  font-size: 17px;
+  font-weight: normal;
+  height: 43px;
+  -webkit-appearance: none;
+  text-align: center;
+  width: 85%;
+  margin: 40px 10px;
 }
