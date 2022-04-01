@@ -53,7 +53,7 @@ export const Login = ({ isToken, setIsToken }) => {
 
         if (userData) {
             setIsToken(userData)
-            navigate('/');
+            navigate('/check');
         }
     }
 

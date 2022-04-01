@@ -36,7 +36,10 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/flight" element={<ProductLanding />} />
         <Route path="/checkout" element={<CheckOut />} />
-        <Route path="/check" element={<Payments />} />
+        <Route
+          path="/check"
+          element={<Payments isToken={isToken} setIsToken={setIsToken} />}
+        />
         <Route
           path="/login"
           element={<Login isToken={isToken} setIsToken={setIsToken} />}
