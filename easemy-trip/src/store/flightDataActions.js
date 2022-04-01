@@ -13,7 +13,7 @@ export const fetchFlightData = (dateObj) => {
       if (!response.ok) {
         throw new Error("Could not fetch data");
       }
-  
+
       const data = await response.json();
       return data;
     };
@@ -27,4 +27,3 @@ export const fetchFlightData = (dateObj) => {
     }
   };
 };
-

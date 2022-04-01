@@ -15,11 +15,13 @@ export const RightContainer = () => {
   const dispatch = useDispatch();
   const flightData = useSelector((state) => state.flightData.data);
 
-  const dateObj = useSelector((state)=>(state.dateSearch))
+  const dateObj = useSelector((state)=>(state.dateSearch.dateObj))
 
+  console.log(dateObj);
   useEffect(() => {
     dispatch(fetchFlightData(dateObj));
   }, [dispatch]);
+
   return (
     <div>
       <DateSlider />

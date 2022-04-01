@@ -6,7 +6,7 @@ import { flightDataActions } from '../../../store/flightDataSlice';
 import { fetchFlightData } from '../../../store/flightDataActions';
 
 
-let valueFilter = 5000
+let valueFilter = 4000
 function valuetext(value) {
   valueFilter = value
 }
@@ -18,23 +18,30 @@ export default function PriceSlider() {
   // const flightData = useSelector((state) => state.flightData.filter);
   const dispatch = useDispatch()
 
-  const dateObj = useSelector((state)=>(state.dateSearch))
+  const dateObj = useSelector((state)=>(state.dateSearch.dateObj))
+  
+  const [prevFilter,setPrevFilter] = React.useState("")
   
 
   return (
     <Box sx={{ width: 200 , marginTop:"10px"}}>
       <Slider
         aria-label="Small steps"
-        defaultValue={4500}
+        defaultValue={4000}
         getAriaValueText={valuetext}
-        step={500}
+        step={1000}
         marks
         min={5000}
         max={7500}
         valueLabelDisplay="bottom"
         onChange={()=>{
+          if(!prevFilter){
+            dispatch(flightDataActions.removeFilter(["price",prevFilter]))
+          }
           dispatch(flightDataActions.filterData(["price",valueFilter]))
+          setPrevFilter(valueFilter)
           dispatch(fetchFlightData(dateObj)) 
+
         }}
       />
     </Box>

@@ -8,7 +8,7 @@ import PriceSlider from "./PriceSlider";
 export const LeftContainer = () => {
   const dispatch = useDispatch();
 
-  const dateObj = useSelector((state)=>(state.dateSearch))
+  const dateObj = useSelector((state)=>(state.dateSearch.dateObj))
   return (
     <div className={styles.LeftContainerMain}>
       <div className={styles.filterTitle}>Filter</div>

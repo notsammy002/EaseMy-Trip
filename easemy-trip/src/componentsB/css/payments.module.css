@@ -1,0 +1,12 @@
+.mainDiv {
+  background-color: #eeeeee;
+  height: 100vh;
+}
+
+.payments {
+  display: grid;
+  grid-template-columns: 70% 30%;
+  background-color: #eeeeee;
+  width: 90%;
+  margin: auto;
+}

@@ -6,10 +6,10 @@ export const ProductLanding = () => {
   return (
     <div className={styles.mainContainer}>
       <div className={styles.leftContainer}>
-       <LeftContainer/>
+        <LeftContainer />
       </div>
       <div className={styles.rightContainer}>
-       <RightContainer/>
+        <RightContainer />
       </div>
     </div>
   );

@@ -1,16 +1,15 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, current } from "@reduxjs/toolkit";
 
 
 const dateToSearchSlice = createSlice({
     name:"search date",
-    initialState: {
-        date: "17April2022",
-        from_location :"Jaipur",
-        to_location:"Delhi"
-    },
+    initialState: { dateObj:{} },
     reducers:{
         searchObj(state,action){
-            state = state.action.payload
+        
+            state.dateObj = action.payload
+            
+            console.log(current(state));
         }
     }
 })

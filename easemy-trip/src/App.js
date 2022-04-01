@@ -1,17 +1,25 @@
-import React from 'react';
-import { Route, Routes } from 'react-router-dom';
-import './App.css';
+import { Route, Routes } from "react-router-dom";
+import "./App.css";
 
+import Home from "./Components/Home/Home";
 
-import Home from './Components/Home/Home';
+import Navbar from "./Components/Navbar/Navbar";
+import { Login } from "./componentsB/authentication/Login";
+import { Register } from "./componentsB/authentication/Register";
 
-import Navbar from './Components/Navbar/Navbar';
-import { ProductLanding } from './Components/ProductFlights/ProductLanding/ProductLanding';
+import { Payments } from "./componentsB/Payments";
+import React from "react";
+// import { Route, Routes } from 'react-router-dom';
+// import './App.css';
+import CheckOut from "./Components/Home/CheckOut";
+import Footer from "./Components/Home/Footer";
+
+// import Home from './Components/Home/Home';
+
+// import Navbar from './Components/Navbar/Navbar';
+import { ProductLanding } from "./Components/ProductFlights/ProductLanding/ProductLanding";
 
 function App() {
-
-
-  
   // const dispatch = useDispatch()
   // const flightData = useSelector(state=>state.flightData.data)
   // useEffect(()=>{
@@ -20,16 +28,20 @@ function App() {
 
   return (
     <div className="App">
-     
-     <Navbar/>
-        
+      <Navbar />
 
-     <Routes>
-       <Route path="/" element={<Home/>}/>
-       <Route path="/flight" element={ <ProductLanding/> }/>
-     </Routes>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/flight" element={<ProductLanding />} />
+        <Route path="/checkout" element={<CheckOut />} />
+        <Route path="/check" element={<Payments />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+      </Routes>
 
-     {/* footer aayega */}
+      {/* footer aayega */}
+
+      <Footer />
     </div>
   );
 }
