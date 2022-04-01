@@ -33,7 +33,7 @@ function App() {
      </Routes>
 
      {/* footer aayega */}
-     <Footer />
+     
     </div>
   );
 }

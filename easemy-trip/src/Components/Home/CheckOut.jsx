@@ -8,12 +8,17 @@ const CheckOut = () => {
     useEffect(() => {
         axios({
             method: 'get',
-            url: 'http://localhost:3000/flights',
+            url: `http://localhost:3000/flights/$('')`,
           })
             .then(function (response) {
               setData(response)
             });
     }, [])
+
+    const insuranceYes = (e) =>{
+        const newprice = e.currentTaget.value;
+        console.log(newprice)
+    }
     
 
     return (
@@ -77,7 +82,7 @@ const CheckOut = () => {
 
                                                 <div className={checkoutstyles.flightdetail_fligt_3}>
                                                     <div className={checkoutstyles.flightdetail_fligt_3stp}>
-                                                        <span>01h 00m</span>
+                                                        <span>{`${data.duration} h`}</span>
                                                     </div>
 
                                                     <div className={checkoutstyles.flightdetail_fligt_3lindvd}>
@@ -91,15 +96,15 @@ const CheckOut = () => {
 
                                                 <div className={checkoutstyles.flightdetail_fligt_1}>
                                                     <div className={checkoutstyles.flightdetail_fligt_1cm}>
-                                                        <span className={checkoutstyles.flightdetail_fligt_1cm_time}>14:50</span>
+                                                        <span className={checkoutstyles.flightdetail_fligt_1cm_time}>{data.arrival_time}</span>
                                                     </div>
 
                                                     <div className={checkoutstyles.flightdetail_fligt_airdt}>
                                                         <div className={checkoutstyles.flightdetail_fligt_flc}>
-                                                            <span>Mumbai</span>
-                                                            <span>(BOM)</span>
+                                                            <span>{data.to_location}</span>
+                                                            <span>{data.to_location_code}</span>
                                                         </div>
-                                                        <span>Sun-03Apr2022</span>
+                                                        <span>{data.arrival_date}</span>
                                                         <span>Termial-1</span>
                                                     </div>
                                                 </div>
@@ -139,7 +144,7 @@ const CheckOut = () => {
 
                                 <div className={checkoutstyles.medical_insurance_yes}>
                                     <input type="radio" name='yesmedical' />
-                                    <label className={checkoutstyles.medical_insurance_lable}>Yes, I want to add Medical Refund Policy (FREE) to this flight</label>
+                                    <label className={checkoutstyles.medical_insurance_lable}>No, I want to add Medical Refund Policy (FREE) to this flight</label>
                                     <span className={checkoutstyles.medical_insurance_checkmate}> </span>
                                 </div>
                             </div>
@@ -244,8 +249,8 @@ const CheckOut = () => {
 
                                         <div className={checkoutstyles.insurance_option}>
                                             <div className={checkoutstyles.insurance_option_yes}>
-                                                <input type="checkbox" name="vehicle1" value="Car1" />
-                                                <label for="vehicle1">
+                                                <input type="radio" name="insurance" value={data.insurance} onClick ={insuranceYes} />
+                                                <label for="insurance">
                                                     Yes, I want to secure my trip with insurance.
                                                 </label><br />
                                             </div>
@@ -253,8 +258,8 @@ const CheckOut = () => {
                                             <div className={checkoutstyles.insurance_option_div}>More than 36% of our customers choose to secure their trip.</div>
 
                                             <div className={checkoutstyles.insurance_option_no}>
-                                                <input type="checkbox" name="vehicle2" value="Car" />
-                                                <label for="vehicle2">
+                                                <input type="radio" name="insurance" value={data.insurance} />
+                                                <label for="insurance">
                                                     No, I do not want to insure my trip
                                                 </label><br />
                                             </div>
