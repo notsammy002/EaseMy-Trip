@@ -4,9 +4,11 @@ import { fetchFlightData } from "../../../store/flightDataActions";
 import { flightDataActions } from "../../../store/flightDataSlice";
 import styles from "./leftContainer.module.css";
 import PriceSlider from "./PriceSlider";
-const date = "17April2022";
+
 export const LeftContainer = () => {
   const dispatch = useDispatch();
+
+  const dateObj = useSelector((state)=>(state.dateSearch))
   return (
     <div className={styles.LeftContainerMain}>
       <div className={styles.filterTitle}>Filter</div>
@@ -18,10 +20,10 @@ export const LeftContainer = () => {
             onChange={(e) => {
               if (e.target.checked) {
                 dispatch(flightDataActions.filterData(["stop", "non"]));
-                dispatch(fetchFlightData(date));
+                dispatch(fetchFlightData(dateObj));
               } else {
                 dispatch(flightDataActions.removeFilter(["stop", "non"]));
-                dispatch(fetchFlightData(date));
+                dispatch(fetchFlightData(dateObj));
               }
             }}
           />
@@ -37,10 +39,10 @@ export const LeftContainer = () => {
             onChange={(e) => {
               if (e.target.checked) {
                 dispatch(flightDataActions.filterData(["company_name", "AirAsia"]));
-                dispatch(fetchFlightData(date));
+                dispatch(fetchFlightData(dateObj));
               } else {
                 dispatch(flightDataActions.removeFilter(["company_name", "AirAsia"]));
-                dispatch(fetchFlightData(date));
+                dispatch(fetchFlightData(dateObj));
               }
             }}
           />
@@ -50,10 +52,10 @@ export const LeftContainer = () => {
           <input type="checkbox"   onChange={(e) => {
               if (e.target.checked) {
                 dispatch(flightDataActions.filterData(["company_name", "GO FIRST"]));
-                dispatch(fetchFlightData(date));
+                dispatch(fetchFlightData(dateObj));
               } else {
                 dispatch(flightDataActions.removeFilter(["company_name", "GO FIRST"]));
-                dispatch(fetchFlightData(date));
+                dispatch(fetchFlightData(dateObj));
               }
             }}/>
           <label style={{ paddingBottom: "4px" }}>GO FIRST</label>
@@ -62,10 +64,10 @@ export const LeftContainer = () => {
           <input type="checkbox"  onChange={(e) => {
               if (e.target.checked) {
                 dispatch(flightDataActions.filterData(["company_name", "Spicejet"]));
-                dispatch(fetchFlightData(date));
+                dispatch(fetchFlightData(dateObj));
               } else {
                 dispatch(flightDataActions.removeFilter(["company_name", "Spicejet"]));
-                dispatch(fetchFlightData(date));
+                dispatch(fetchFlightData(dateObj));
               }
             }} />
           <label style={{ paddingBottom: "4px" }}>Spicejet</label>
@@ -74,10 +76,10 @@ export const LeftContainer = () => {
           <input type="checkbox"  onChange={(e) => {
               if (e.target.checked) {
                 dispatch(flightDataActions.filterData(["company_name", "Vistara"]));
-                dispatch(fetchFlightData(date));
+                dispatch(fetchFlightData(dateObj));
               } else {
                 dispatch(flightDataActions.removeFilter(["company_name", "Vistara"]));
-                dispatch(fetchFlightData(date));
+                dispatch(fetchFlightData(dateObj));
               }
             }} />
           <label style={{ paddingBottom: "4px" }}>Vistara</label>
@@ -86,10 +88,10 @@ export const LeftContainer = () => {
           <input type="checkbox"  onChange={(e) => {
               if (e.target.checked) {
                 dispatch(flightDataActions.filterData(["company_name", "Air India"]));
-                dispatch(fetchFlightData(date));
+                dispatch(fetchFlightData(dateObj));
               } else {
                 dispatch(flightDataActions.removeFilter(["company_name", "Air India"]));
-                dispatch(fetchFlightData(date));
+                dispatch(fetchFlightData(dateObj));
               }
             }}/>
           <label style={{ paddingBottom: "4px" }}>Air India</label>
@@ -98,10 +100,10 @@ export const LeftContainer = () => {
           <input type="checkbox"  onChange={(e) => {
               if (e.target.checked) {
                 dispatch(flightDataActions.filterData(["company_name", "Indigo"]));
-                dispatch(fetchFlightData(date));
+                dispatch(fetchFlightData(dateObj));
               } else {
                 dispatch(flightDataActions.removeFilter(["company_name", "Indigo"]));
-                dispatch(fetchFlightData(date));
+                dispatch(fetchFlightData(dateObj));
               }
             }} />
           <label style={{ paddingBottom: "4px" }}>Indigo</label>
@@ -123,21 +125,21 @@ export const LeftContainer = () => {
         <div className={styles.stopFilters}>
           <button   onClick={() => {
                 dispatch(flightDataActions.filterData(["stop", "non"]));
-                dispatch(fetchFlightData(date));
+                dispatch(fetchFlightData(dateObj));
               
             }}>
             0 <br /> Non-Stop{" "}
           </button>
           <button  onClick={() => {
                 dispatch(flightDataActions.filterData(["stop", "one"]));
-                dispatch(fetchFlightData(date));
+                dispatch(fetchFlightData(dateObj));
               
             }}>
             1 <br /> Stop{" "}
           </button>
           <button onClick={() => {
                 dispatch(flightDataActions.filterData(["stop", "two"]));
-                dispatch(fetchFlightData(date));
+                dispatch(fetchFlightData(dateObj));
               
             }}>
             2+ <br /> Stop{" "}
@@ -149,7 +151,15 @@ export const LeftContainer = () => {
         <div className={styles.titlePopularFilters}>Airlines</div>
         <div className={styles.airlineChecks}>
           <div>
-            <input type="checkbox" />
+            <input type="checkbox" onChange={(e) => {
+              if (e.target.checked) {
+                dispatch(flightDataActions.filterData(["company_name", "AirAsia"]));
+                dispatch(fetchFlightData(dateObj));
+              } else {
+                dispatch(flightDataActions.removeFilter(["company_name", "AirAsia"]));
+                dispatch(fetchFlightData(dateObj));
+              }
+            }} />
             <img
               src="https://flight.easemytrip.com/Content/AirlineLogon/I5.png"
               alt=""
@@ -161,7 +171,15 @@ export const LeftContainer = () => {
         </div>
         <div className={styles.airlineChecks}>
           <div>
-            <input type="checkbox" />
+            <input type="checkbox" onChange={(e) => {
+              if (e.target.checked) {
+                dispatch(flightDataActions.filterData(["company_name", "GO FIRST"]));
+                dispatch(fetchFlightData(dateObj));
+              } else {
+                dispatch(flightDataActions.removeFilter(["company_name", "GO FIRST"]));
+                dispatch(fetchFlightData(dateObj));
+              }
+            }} />
             <img
               src="https://flight.easemytrip.com/Content/AirlineLogon/G8.png"
               alt=""
@@ -173,7 +191,15 @@ export const LeftContainer = () => {
         </div>
         <div className={styles.airlineChecks}>
           <div>
-            <input type="checkbox" />
+            <input type="checkbox" onChange={(e) => {
+              if (e.target.checked) {
+                dispatch(flightDataActions.filterData(["company_name", "Spicejet"]));
+                dispatch(fetchFlightData(dateObj));
+              } else {
+                dispatch(flightDataActions.removeFilter(["company_name", "Spicejet"]));
+                dispatch(fetchFlightData(dateObj));
+              }
+            }}/>
             <img
               src="https://flight.easemytrip.com/Content/AirlineLogon/SG.png"
               alt=""
@@ -185,7 +211,15 @@ export const LeftContainer = () => {
         </div>
         <div className={styles.airlineChecks}>
           <div>
-            <input type="checkbox" />
+            <input type="checkbox" onChange={(e) => {
+              if (e.target.checked) {
+                dispatch(flightDataActions.filterData(["company_name", "Vistara"]));
+                dispatch(fetchFlightData(dateObj));
+              } else {
+                dispatch(flightDataActions.removeFilter(["company_name", "Vistara"]));
+                dispatch(fetchFlightData(dateObj));
+              }
+            }} />
             <img
               src="https://flight.easemytrip.com/Content/AirlineLogon/UK.png"
               alt=""
@@ -196,7 +230,15 @@ export const LeftContainer = () => {
         </div>
         <div className={styles.airlineChecks}>
           <div>
-            <input type="checkbox" />
+            <input type="checkbox"  onChange={(e) => {
+              if (e.target.checked) {
+                dispatch(flightDataActions.filterData(["company_name", "Air India"]));
+                dispatch(fetchFlightData(dateObj));
+              } else {
+                dispatch(flightDataActions.removeFilter(["company_name", "Air India"]));
+                dispatch(fetchFlightData(dateObj));
+              }
+            }}/>
             <img
               src="https://flight.easemytrip.com/Content/AirlineLogon/AI.png"
               alt=""

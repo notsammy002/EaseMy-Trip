@@ -3,28 +3,29 @@ import Box from "@mui/material/Box";
 import Tabs, { tabsClasses } from "@mui/material/Tabs";
 import { FaRegCalendarAlt } from "react-icons/fa";
 import styles from "./dateSlide.module.css";
+import { useSelector } from "react-redux";
 
 const dateArr = [
-  "Apr 01",
-  "Apr 01",
-  "Apr 01",
-  "Apr 01",
-  "Apr 01",
-  "Apr 01",
-  "Apr 01",
-  "Apr 01",
-  "Apr 01",
-  "Apr 01",
-  "Apr 01",
-  "Apr 01",
-  "Apr 01",
-  "Apr 01",
-  "Apr 01",
-  "Apr 01",
-  "Apr 01",
-  "Apr 01",
-  "Apr 01",
-  "Apr 01",
+  "Apr 16",
+  "Apr 17",
+  "Apr 18",
+  "Apr 19",
+  "Apr 20",
+  "Apr 21",
+  "Apr 22",
+  "Apr 23",
+  "Apr 24",
+  "Apr 25",
+  "Apr 26",
+  "Apr 27",
+  "Apr 28",
+  "Apr 29",
+  "Apr 30",
+  "Apr 31",
+  "May 01",
+  "May 02",
+  "May 03",
+  "May 04",
 ];
 export default function DateSlider() {
   const [value, setValue] = React.useState(0);
@@ -32,6 +33,8 @@ export default function DateSlider() {
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
+
+  
 
   return (
     <div style={{ display: "flex" }}>
