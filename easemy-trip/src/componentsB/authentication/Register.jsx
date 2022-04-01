@@ -34,8 +34,35 @@ export const Register = () => {
 
         const res = await response.json();
 
-        console.log(res)
+        console.log(res);
+
+        navigate('/login');
     }
+
+    // const localStorageSet = (data) => {
+
+    //     let userData = JSON.parse(localStorage.getItem('userData'));
+
+    //     if (userData.token) {
+    //         navigate('/');
+    //     } else {
+    //         userData = {};
+
+    //         localStorage.setItem('userData', JSON.stringify(userData));
+    //     }
+
+    //     userData
+    // }
+
+    const localStorageCheck = () => {
+        const userData = JSON.parse(localStorage.getItem('userData'));
+
+        if (userData) {
+            navigate('/');
+        }
+    }
+
+    React.useEffect(() => { localStorageCheck() }, []);
 
     return (
         <div className={styles.div}>
@@ -62,7 +89,7 @@ export const Register = () => {
                         <input className={styles.inputLogin} type="password" placeholder="Enter Password.." value={signupData.password} name="password" onChange={onChangeHandler} />
                     </div>
 
-                    <input type="submit" value="Continue" className={styles.submitButton} />
+                    <input type="submit" value="Continue" className={signupData.email != '' && signupData.password != '' && signupData.name != '' ? styles.submitButtonColor : styles.submitButton} />
                 </form>
             </div>
         </div >

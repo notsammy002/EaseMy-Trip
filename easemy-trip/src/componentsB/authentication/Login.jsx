@@ -1,8 +1,9 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import styles from '../css/login.module.css'
+import styles from '../css/login.module.css';
+import { GoogleLogin } from "react-google-login";
 
-export const Login = () => {
+export const Login = ({ isToken, setIsToken }) => {
 
     const [loginData, setLoginData] = React.useState({ email: '', password: '' })
     const navigate = useNavigate();
@@ -15,12 +16,17 @@ export const Login = () => {
         // console.log(loginData);
     }
 
+    const responseGoogle = response => {
+        console.log(response);
+    };
+
+
     const onSubmitHandler = async (event) => {
         event.preventDefault();
 
         console.log(loginData)
 
-        const response = await fetch('/auth/login', {
+        const response = await fetch('http://localhost:8000/auth/login', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(loginData)
@@ -34,8 +40,36 @@ export const Login = () => {
 
         const res = await response.json();
 
+        localStorage.setItem('userData', JSON.stringify(res));
+        setLoginData({ email: '', password: '', });
+        navigate('/')
+
         console.log(res)
     }
+
+    const localStorageCheck = () => {
+        const userData = JSON.parse(localStorage.getItem('userData'));
+
+
+        if (userData) {
+            setIsToken(userData)
+            navigate('/check');
+        }
+    }
+
+    // const googleLogin = async () => {
+
+    //     // const res = await fetch('http://localhost:8000/auth/google');
+
+    //     // const data = await res.json();
+    //     // console.log(data);
+
+    //     const res = window.open("http://localhost:8000/auth/google", "_self")
+    //     // const data = res.json()
+    //     console.log(res)
+    // }
+
+    React.useEffect(() => { localStorageCheck() });
 
     return (
         <div className={styles.div}>
@@ -54,8 +88,17 @@ export const Login = () => {
                         <input className={styles.inputLogin} type="password" value={loginData.password} placeholder="Enter Password.." name="password" onChange={onChangeHandler} />
                     </div>
 
-                    <input type="submit" value="Continue" className={styles.submitButton} />
+                    <input type="submit" value="Continue" className={loginData.email != '' && loginData.password != '' ? styles.submitButtonColor : styles.submitButton} />
                 </form>
+
+                {/* <GoogleLogin
+                    clientId="131389240871-nmsg9mvnbn8q2av2456n94ltrme3389g.apps.googleusercontent.com"
+                    buttonText="Signup with Google"
+                    onSuccess={responseGoogle}
+                    onFailure={responseGoogle}
+                /> */}
+
+                {/* <button onClick={googleLogin}>Signup with Google</button> */}
 
                 <h3 className={styles.loginText2}>New here? <span className={styles.spanLogin} onClick={() => navigate('../register')}>Register</span></h3>
             </div>

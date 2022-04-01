@@ -11,8 +11,8 @@ import { Payments } from "./componentsB/Payments";
 import React from "react";
 // import { Route, Routes } from 'react-router-dom';
 // import './App.css';
-// import CheckOut from "./Components/Home/CheckOut";
-import Footer from "./Components/Home/Footer";
+import CheckOut from "./Components/Home/CheckOut";
+
 
 // import Home from './Components/Home/Home';
 
@@ -26,22 +26,30 @@ function App() {
   //   dispatch(fetchFlightData())
   // },[dispatch])
 
+  const [isToken, setIsToken] = React.useState(null);
+
   return (
     <div className="App">
-      <Navbar />
+      <Navbar isToken={isToken} setIsToken={setIsToken} />
 
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/flight" element={<ProductLanding />} />
-        {/* <Route path="/Checkout" element={<CheckOut />} /> */}
-        <Route path="/check" element={<Payments />} />
-        <Route path="/login" element={<Login />} />
+        <Route path="/checkout" element={<CheckOut />} />
+        <Route
+          path="/check"
+          element={<Payments isToken={isToken} setIsToken={setIsToken} />}
+        />
+        <Route
+          path="/login"
+          element={<Login isToken={isToken} setIsToken={setIsToken} />}
+        />
         <Route path="/register" element={<Register />} />
       </Routes>
 
       {/* footer aayega */}
 
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
