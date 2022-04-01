@@ -46,13 +46,16 @@ const flightDataSlice = createSlice({
         }
       });
 
-      //Filter on price
+      // Filter on price
       state.data.data = state.data.data.filter((elem) => {
         if (!Object.keys(state.filter.price).length) {
           return elem;
         }
 
-        if (state.filter.price[elem.price]) {
+        console.log(elem.price);
+        let valArr = Object.keys(state.filter.price)
+        let check = Number(valArr[valArr.length-1])
+        if (Number(elem.price)<= check) {
           return elem;
         }
       });
@@ -62,16 +65,27 @@ const flightDataSlice = createSlice({
       // state.data.sort((a,b)=>(a[action.payload]-b[action.payload]))
     },
     filterData(state, action) {
-        console.log(action.payload);
+        // console.log(action.payload);
         let setProperty = action.payload[0]
         let valueProperty = action.payload[1]
-        console.log(setProperty,valueProperty);
+        
         state.filter[setProperty][valueProperty] = valueProperty;
-        console.log(current(state).filter);
+        // console.log(current(state).data.data);
     },
     removeFilter(state, action) {
       delete state.filter[action.payload[0]][action.payload[1]];
     },
+    // priceFilter(state,action){
+    //   state.data.data = state.data.data.filter((elem)=>{
+    //     if(elem.price<=action.payload){
+    //       return elem
+    //     }
+      
+    //  })
+
+    //  console.log(current(state).data.data);
+
+    // }
   },
 });
 

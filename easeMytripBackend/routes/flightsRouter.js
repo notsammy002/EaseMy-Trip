@@ -4,7 +4,7 @@ const router = express.Router();
 
 
 
-router.route("/:departure_date").get(FlightControllers.getFlights).post(FlightControllers.createFlight);
+router.route("/:departure_date/:from_location/:to_location").get(FlightControllers.getFlights).post(FlightControllers.createFlight);
 
 router.route("/:id").patch(FlightControllers.updateFlight)
 

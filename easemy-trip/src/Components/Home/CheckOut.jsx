@@ -1,20 +1,14 @@
 import React, { useEffect, useState} from 'react';
 import axios from 'axios';
 import checkoutstyles from './checkoutstyles.module.css';
+import { useSelector } from 'react-redux';
+import { flightCheckoutActions } from '../../store/flightCheckoutSlice';
 
 const CheckOut = () => {
-    const [data, setData] = useState([])
-
-    useEffect(() => {
-        axios({
-            method: 'get',
-            url: 'http://localhost:3000/flights',
-          })
-            .then(function (response) {
-              setData(response)
-            });
-    }, [])
     
+   const data = useSelector(state=>state.flightCheckout.ticket)
+
+  
 
     return (
         <div className={checkoutstyles.body}>
@@ -77,7 +71,7 @@ const CheckOut = () => {
 
                                                 <div className={checkoutstyles.flightdetail_fligt_3}>
                                                     <div className={checkoutstyles.flightdetail_fligt_3stp}>
-                                                        <span>01h 00m</span>
+                                                        <span>0{data.duration}h 00m</span>
                                                     </div>
 
                                                     <div className={checkoutstyles.flightdetail_fligt_3lindvd}>
@@ -96,10 +90,10 @@ const CheckOut = () => {
 
                                                     <div className={checkoutstyles.flightdetail_fligt_airdt}>
                                                         <div className={checkoutstyles.flightdetail_fligt_flc}>
-                                                            <span>Mumbai</span>
-                                                            <span>(BOM)</span>
+                                                            <span>{data.to_location}</span>
+                                                            <span>({data.to_location_code})</span>
                                                         </div>
-                                                        <span>Sun-03Apr2022</span>
+                                                        <span>{data.day.slice(0,3)}-{data.departure_date}</span>
                                                         <span>Termial-1</span>
                                                     </div>
                                                 </div>

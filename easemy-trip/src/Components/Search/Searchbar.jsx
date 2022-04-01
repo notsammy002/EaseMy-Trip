@@ -11,6 +11,9 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import { useNavigate } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { dateToSearchActions } from '../../store/dateToSearchSlice';
+import { fetchFlightData } from '../../store/flightDataActions';
 
 
 const Searchbar = () => {
@@ -24,11 +27,11 @@ const Searchbar = () => {
     const [inputDestination, setInputDestination] = React.useState('');
     const [date,setDate] =React.useState(null);
     const [returnDate,setReturnDate] =React.useState(null);
-     const [data,setData] =useState({})
-      
+    //  const [data,setData] =useState({})
 
 
-
+    const dispatch = useDispatch()
+    const dateObj = useSelector(state=>state.dateSearch)
     const StyledMenu = styled((props) => (
         <Menu
           elevation={0}
@@ -95,14 +98,17 @@ const Searchbar = () => {
   //  console.log(arr)
   //  console.log(dep)
     var obj ={
-        "From":value,
-        "Destination":destination,
-        "booking_date":arr,
-        "return_date":dep
+        "from_location":value,
+        "to_location":destination,
+        "date":arr
     }
-    setData(obj)
+
+    console.log(obj);
     navigate("/flight")
+    dispatch(dateToSearchActions.searchObj(obj))
+    // dispatch(fetchFlightData(dateObj))
    
+    
      
    }
    

@@ -35,7 +35,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/flight" element={<ProductLanding />} />
-        <Route path="/Checkout" element={<CheckOut />} />
+        <Route path="/checkout" element={<CheckOut />} />
         <Route path="/check" element={<Payments />} />
         <Route
           path="/login"
