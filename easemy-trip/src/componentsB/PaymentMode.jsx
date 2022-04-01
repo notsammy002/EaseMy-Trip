@@ -7,11 +7,14 @@ import { Credit } from './methodsContent/Credit';
 import { UPI } from './methodsContent/UPI';
 import { GiftCard } from './methodsContent/GiftCard';
 import { Wallets } from './methodsContent/Wallets';
+import { useSelector } from 'react-redux';
 
 
 export const PaymentMode = () => {
 
     const [displayContent, setDisplayContent] = React.useState('Credit/Debit/ATM Cards')
+
+    const data = useSelector(state=>state.flightCheckout.ticket)
 
     const methods = [{
         name: 'Credit/Debit/ATM Cards',
@@ -44,7 +47,7 @@ export const PaymentMode = () => {
                         methods.map(method => method.name === displayContent ? method.content : null)
                     }
                     <div className={styles.lastFlex}>
-                        <p className={styles.totalFare}>Total Fare :  ₹ <span>5125</span></p>
+                        <p className={styles.totalFare}>Total Fare :  ₹ <span>{Number(data.price) + 675}</span></p>
                         <button>Make Payment</button>
                     </div>
                 </div>
