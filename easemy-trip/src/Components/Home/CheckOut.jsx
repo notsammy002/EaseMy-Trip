@@ -1,20 +1,15 @@
 import React, { useEffect, useState} from 'react';
 import axios from 'axios';
 import checkoutstyles from './checkoutstyles.module.css';
+import { useSelector } from 'react-redux';
+import { flightCheckoutActions } from '../../store/flightCheckoutSlice';
+import { useNavigate } from 'react-router-dom';
 
 const CheckOut = () => {
-    const [data, setData] = useState([])
-
-    useEffect(() => {
-        axios({
-            method: 'get',
-            url: 'http://localhost:3000/flights',
-          })
-            .then(function (response) {
-              setData(response)
-            });
-    }, [])
     
+   const data = useSelector(state=>state.flightCheckout.ticket)
+
+  const navigate = useNavigate();
 
     return (
         <div className={checkoutstyles.body}>
@@ -46,7 +41,7 @@ const CheckOut = () => {
                                             <div className={checkoutstyles.flightdetail_fligt_detail1}>
                                                 <div className={checkoutstyles.flightdetail_fligt_detail_img}>
                                                     <div className={checkoutstyles.flightdetail_fligt_detail_img_logo}>
-                                                        <img alt="Flight" width="28" src="https://flight.easemytrip.com/Content/AirlineLogon/I5.png" />
+                                                        <img alt="Flight" width="28" src={data.company_icon} />
                                                     </div>
 
                                                     <div className={checkoutstyles.flightdetail_fligt_detail_img_logo_info}>
@@ -62,7 +57,7 @@ const CheckOut = () => {
                                             <div className={checkoutstyles.flightdetail_fligt_detail2}>
                                                 <div className={checkoutstyles.flightdetail_fligt_1}>
                                                     <div className={checkoutstyles.flightdetail_fligt_1cm}>
-                                                        <span className={checkoutstyles.flightdetail_fligt_1cm_time}>{data.arrival_time}</span>
+                                                        <span className={checkoutstyles.flightdetail_fligt_1cm_time}>{data.departure_time[0]}{data.departure_time[1]}: {data.departure_time[2]}{data.departure_time[3]}</span>
                                                     </div>
 
                                                     <div className={checkoutstyles.flightdetail_fligt_airdt}>
@@ -77,7 +72,7 @@ const CheckOut = () => {
 
                                                 <div className={checkoutstyles.flightdetail_fligt_3}>
                                                     <div className={checkoutstyles.flightdetail_fligt_3stp}>
-                                                        <span>01h 00m</span>
+                                                        <span>0{data.duration}h 00m</span>
                                                     </div>
 
                                                     <div className={checkoutstyles.flightdetail_fligt_3lindvd}>
@@ -91,15 +86,15 @@ const CheckOut = () => {
 
                                                 <div className={checkoutstyles.flightdetail_fligt_1}>
                                                     <div className={checkoutstyles.flightdetail_fligt_1cm}>
-                                                        <span className={checkoutstyles.flightdetail_fligt_1cm_time}>14:50</span>
+                                                        <span className={checkoutstyles.flightdetail_fligt_1cm_time}>{data.arrival_time[0]}{data.arrival_time[1]}: {data.arrival_time[2]}{data.arrival_time[3]}</span>
                                                     </div>
 
                                                     <div className={checkoutstyles.flightdetail_fligt_airdt}>
                                                         <div className={checkoutstyles.flightdetail_fligt_flc}>
-                                                            <span>Mumbai</span>
-                                                            <span>(BOM)</span>
+                                                            <span>{data.to_location}</span>
+                                                            <span>({data.to_location_code})</span>
                                                         </div>
-                                                        <span>Sun-03Apr2022</span>
+                                                        <span>{data.day.slice(0,3)}-{data.departure_date}</span>
                                                         <span>Termial-1</span>
                                                     </div>
                                                 </div>
@@ -353,8 +348,7 @@ const CheckOut = () => {
                                 </div>
 
                                 <div className={checkoutstyles.email_form_boxbutton}>
-                                    <span >PAYMENT</span>
-                                    <input type="submit" style={{ display: "none" }}></input>
+                                    <button  onClick = {() => navigate("/check")}>PAYMENT</button>
                                 </div>
                             </div>
 
@@ -416,7 +410,7 @@ const CheckOut = () => {
                                                 Grand Total
                                             </div>
                                             <div className={checkoutstyles.sideBar_bor_tableR2C2}>
-                                                Rs 0
+                                                Rs {Number(data.price) + 675} 
                                             </div>
                                         </div>
                                     </div>

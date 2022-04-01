@@ -9,16 +9,19 @@ import { useDispatch } from "react-redux";
 import { fetchFlightData } from "../../../store/flightDataActions";
 import { flightDataActions } from "../../../store/flightDataSlice";
 
-const date = "17April2022";
+// const date = "17April2022";
 
 export const RightContainer = () => {
   const dispatch = useDispatch();
   const flightData = useSelector((state) => state.flightData.data);
+
+  const dateObj = useSelector((state)=>(state.dateSearch.dateObj))
+
+  console.log(dateObj);
   useEffect(() => {
-    dispatch(fetchFlightData(date));
+    dispatch(fetchFlightData(dateObj));
   }, [dispatch]);
 
-  console.log(flightData);
   return (
     <div>
       <DateSlider />
