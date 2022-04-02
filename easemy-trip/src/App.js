@@ -11,7 +11,7 @@ import { Payments } from "./componentsB/Payments";
 import React from "react";
 // import { Route, Routes } from 'react-router-dom';
 // import './App.css';
-import CheckOut from "./Components/Home/CheckOut";
+// import CheckOut from "./Components/Home/CheckOut";
 import Footer from "./Components/Home/Footer";
 
 // import Home from './Components/Home/Home';
@@ -35,12 +35,17 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/flight" element={<ProductLanding />} />
+
         <Route path="/checkout" element={<CheckOut />} />
-        <Route path="/check" element={<Payments />} />
+        <Route
+          path="/check"
+          element={<Payments isToken={isToken} setIsToken={setIsToken} />}
+        />
         <Route
           path="/login"
           element={<Login isToken={isToken} setIsToken={setIsToken} />}
         />
+
         <Route path="/register" element={<Register />} />
       </Routes>
 
