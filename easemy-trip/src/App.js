@@ -35,6 +35,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/flight" element={<ProductLanding />} />
+
         <Route path="/checkout" element={<CheckOut />} />
         <Route
           path="/check"
@@ -44,6 +45,7 @@ function App() {
           path="/login"
           element={<Login isToken={isToken} setIsToken={setIsToken} />}
         />
+
         <Route path="/register" element={<Register />} />
       </Routes>
 
