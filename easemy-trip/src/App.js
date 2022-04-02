@@ -11,8 +11,8 @@ import { Payments } from "./componentsB/Payments";
 import React from "react";
 // import { Route, Routes } from 'react-router-dom';
 // import './App.css';
-// import CheckOut from "./Components/Home/CheckOut";
-import Footer from "./Components/Home/Footer";
+import CheckOut from "./Components/Home/CheckOut";
+
 
 // import Home from './Components/Home/Home';
 
