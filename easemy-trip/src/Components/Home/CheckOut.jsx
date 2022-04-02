@@ -6,8 +6,9 @@ import { flightCheckoutActions } from '../../store/flightCheckoutSlice';
 import { useNavigate } from 'react-router-dom';
 
 const CheckOut = () => {
-    
    const data = useSelector(state=>state.flightCheckout.ticket)
+
+   const [insurance, setInsurance] = useState(false)
 
   const navigate = useNavigate();
 
@@ -72,7 +73,7 @@ const CheckOut = () => {
 
                                                 <div className={checkoutstyles.flightdetail_fligt_3}>
                                                     <div className={checkoutstyles.flightdetail_fligt_3stp}>
-                                                        <span>0{data.duration}h 00m</span>
+                                                        <span>{`${data.duration} h`}</span>
                                                     </div>
 
                                                     <div className={checkoutstyles.flightdetail_fligt_3lindvd}>
@@ -92,9 +93,9 @@ const CheckOut = () => {
                                                     <div className={checkoutstyles.flightdetail_fligt_airdt}>
                                                         <div className={checkoutstyles.flightdetail_fligt_flc}>
                                                             <span>{data.to_location}</span>
-                                                            <span>({data.to_location_code})</span>
+                                                            <span>{data.to_location_code}</span>
                                                         </div>
-                                                        <span>{data.day.slice(0,3)}-{data.departure_date}</span>
+                                                        <span>{data.arrival_date}</span>
                                                         <span>Termial-1</span>
                                                     </div>
                                                 </div>
@@ -134,7 +135,7 @@ const CheckOut = () => {
 
                                 <div className={checkoutstyles.medical_insurance_yes}>
                                     <input type="radio" name='yesmedical' />
-                                    <label className={checkoutstyles.medical_insurance_lable}>Yes, I want to add Medical Refund Policy (FREE) to this flight</label>
+                                    <label className={checkoutstyles.medical_insurance_lable}>No, I want to add Medical Refund Policy (FREE) to this flight</label>
                                     <span className={checkoutstyles.medical_insurance_checkmate}> </span>
                                 </div>
                             </div>
@@ -235,21 +236,21 @@ const CheckOut = () => {
                                         </div>
                                     </div>
 
-                                    <div>
+                                    <div> 
 
                                         <div className={checkoutstyles.insurance_option}>
                                             <div className={checkoutstyles.insurance_option_yes}>
-                                                <input type="checkbox" name="vehicle1" value="Car1" />
-                                                <label for="vehicle1">
+                                                <input type="radio" name="insurance" onClick={() => { setInsurance(true) }} />
+                                                <label for="insurance">
                                                     Yes, I want to secure my trip with insurance.
                                                 </label><br />
                                             </div>
 
                                             <div className={checkoutstyles.insurance_option_div}>More than 36% of our customers choose to secure their trip.</div>
 
-                                            <div className={checkoutstyles.insurance_option_no}>
-                                                <input type="checkbox" name="vehicle2" value="Car" />
-                                                <label for="vehicle2">
+                                            <div className={checkoutstyles.insurance_option_no }>
+                                                <input type="radio" name="insurance" onClick={() => { setInsurance(false) }} />
+                                                <label for="insurance">
                                                     No, I do not want to insure my trip
                                                 </label><br />
                                             </div>
@@ -278,10 +279,7 @@ const CheckOut = () => {
                                 <br />
                                 <label className={checkoutstyles.email_form_boxL}>Please enter your email address *</label>
 
-                                <div className={checkoutstyles.email_form_boxbutton}>
-                                    <span >Continue Booking</span>
-                                    <input type="submit" style={{ display: "none" }}></input>
-                                </div>
+                                
                             </form>
                         </div>
 
@@ -344,11 +342,16 @@ const CheckOut = () => {
                                     <span>Your Mobile number will be used only for sending flight related communication</span>
                                 </div>
                                 <div className={checkoutstyles.userDetail_phone_body}>
-                                    <input type="number" value="UserDetail_phn_no" name='UserDetail_phn_no' placeholder='Enter your mobile numuber' />
+                                    <input type="text"  placeholder='Enter your mobile numuber' />
                                 </div>
 
+                                {/* <div className={checkoutstyles.email_form_boxbutton}>
+                                    <span >Continue Booking</span>
+                                    <input type="submit" style={{ display: "none" }}></input>
+                                </div> */}
+
                                 <div className={checkoutstyles.email_form_boxbutton}>
-                                    <button  onClick = {() => navigate("/check")}>PAYMENT</button>
+                                    <button  onClick = {() => navigate("/check")}>Continue Booking</button>
                                 </div>
                             </div>
 
@@ -406,11 +409,20 @@ const CheckOut = () => {
                                         </div>
 
                                         <div className={checkoutstyles.sideBar_bor_tableR1}>
+                                            <div className={checkoutstyles.sideBar_bor_tableR1C1}>
+                                                Medical Insurance
+                                            </div>
+                                            <div className={checkoutstyles.sideBar_bor_tableR1C2}>
+                                                Rs {insurance ? 199 : 0 }
+                                            </div>
+                                        </div>
+
+                                        <div className={checkoutstyles.sideBar_bor_tableR1}>
                                             <div className={checkoutstyles.sideBar_bor_tableR2C1}>
                                                 Grand Total
                                             </div>
                                             <div className={checkoutstyles.sideBar_bor_tableR2C2}>
-                                                Rs {Number(data.price) + 675} 
+                                                Rs {insurance ? Number(data.price) + 675 + 199 : Number(data.price) + 675 }
                                             </div>
                                         </div>
                                     </div>
