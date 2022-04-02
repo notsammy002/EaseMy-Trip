@@ -2,18 +2,18 @@ import { flightDataActions } from "./flightDataSlice";
 
 // creating fetch function via redux thunk
 
-export const fetchFlightData = (date) => {
+export const fetchFlightData = (dateObj) => {
   
 
   return async (dispatch) => { 
 
     const fetchData = async () => {
-      const response = await fetch(`http://localhost:8000/flights/${date}`);
+      const response = await fetch(`http://localhost:8000/flights/${dateObj.date}/${dateObj.from_location}/${dateObj.to_location}`);
   
       if (!response.ok) {
         throw new Error("Could not fetch data");
       }
-  
+
       const data = await response.json();
       return data;
     };
@@ -27,4 +27,3 @@ export const fetchFlightData = (date) => {
     }
   };
 };
-

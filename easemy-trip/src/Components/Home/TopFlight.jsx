@@ -87,7 +87,7 @@ const TopFlight = () => {
           <div className={style.news_text}>
             <h5>Travel to Shimla, Dharamshala Manali on a Volvo from Chandigarh airport.</h5>
             <p>
-            Under the UDAN scheme, Himachal Road Transport Corporation (HRTC) minister
+              Under the UDAN scheme, Himachal Road Transport Corporation (HRTC) minister
             </p>
           </div>
         </div>
@@ -96,7 +96,7 @@ const TopFlight = () => {
           <div className={style.news_text}>
             <h5>Singapore to replace its COVID 19 rules.</h5>
             <p>
-            From 1st April, fully vaccinated passengers will be permitted to enter Singapore
+              From 1st April, fully vaccinated passengers will be permitted to enter Singapore
             </p>
           </div>
         </div>
@@ -105,7 +105,7 @@ const TopFlight = () => {
           <div className={style.news_text}>
             <h5>Domestic air travel to pick up pace.</h5>
             <p>
-            Places like Goa, Srinagar, Daman, are the preferred destinations for this summer
+              Places like Goa, Srinagar, Daman, are the preferred destinations for this summer
             </p>
           </div>
         </div>
@@ -114,7 +114,7 @@ const TopFlight = () => {
           <div className={style.news_text}>
             <h5>Planning to fly to Spain: Rules explained</h5>
             <p>
-            Many European countries have lifted their restrictions but Spain
+              Many European countries have lifted their restrictions but Spain
             </p>
           </div>
         </div>
@@ -123,7 +123,7 @@ const TopFlight = () => {
           <div className={style.news_text}>
             <h5>If you are fully vaccinated then one can fly to these places with no quarantine restrictions</h5>
             <p>
-            As the cases are decreased international travel is opening up.
+              As the cases are decreased international travel is opening up.
             </p>
           </div>
         </div>
@@ -132,7 +132,7 @@ const TopFlight = () => {
           <div className={style.news_text}>
             <h5>Hong Kong to remove ban on international flights</h5>
             <p>
-            From April 1, Hong Kong plans to restart international flights.
+              From April 1, Hong Kong plans to restart international flights.
             </p>
           </div>
         </div>

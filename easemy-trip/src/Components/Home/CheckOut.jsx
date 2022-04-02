@@ -1,25 +1,18 @@
 import React, { useEffect, useState} from 'react';
 import axios from 'axios';
 import checkoutstyles from './checkoutstyles.module.css';
+import { useSelector } from 'react-redux';
+import { flightCheckoutActions } from '../../store/flightCheckoutSlice';
 
 const CheckOut = () => {
-    const [data, setData] = useState([])
+   const data = useSelector(state=>state.flightCheckout.ticket)
 
-    useEffect(() => {
-        axios({
-            method: 'get',
-            url: `http://localhost:3000/flights/$('')`,
-          })
-            .then(function (response) {
-              setData(response)
-            });
-    }, [])
-
-    const insuranceYes = (e) =>{
-        const newprice = e.currentTaget.value;
-        console.log(newprice)
-    }
-    
+   const newprice = data.price + 675;
+  
+   const insuranceYes = ()=> {
+       newprice = newprice + 199;
+       
+   }
 
     return (
         <div className={checkoutstyles.body}>
@@ -421,7 +414,7 @@ const CheckOut = () => {
                                                 Grand Total
                                             </div>
                                             <div className={checkoutstyles.sideBar_bor_tableR2C2}>
-                                                Rs 0
+                                                Rs {newprice}
                                             </div>
                                         </div>
                                     </div>
