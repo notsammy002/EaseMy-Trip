@@ -18,6 +18,7 @@ import Footer from "./Components/Home/Footer";
 
 // import Navbar from './Components/Navbar/Navbar';
 import { ProductLanding } from "./Components/ProductFlights/ProductLanding/ProductLanding";
+import CheckOut from "./Components/Home/CheckOut";
 
 function App() {
   // const dispatch = useDispatch()
@@ -31,7 +32,7 @@ function App() {
   return (
     <div className="App">
       <Navbar isToken={isToken} setIsToken={setIsToken} />
-
+     
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/flight" element={<ProductLanding />} />
